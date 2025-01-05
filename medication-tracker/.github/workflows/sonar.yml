@@ -32,13 +32,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm ci
-          npm run bootstrap
-          cd packages/backend && pip install -r requirements.txt
-          cd ../..
+          cd frontend && npm install
+          cd ../backend && pip install -r requirements.txt
+          cd ../
 
       - name: Generate coverage reports
-        run: npm run coverage
+        run: |
+          cd frontend && npm run test:coverage
+          cd ../backend && python -m pytest --cov=app --cov-report=xml
+          cd ../
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
@@ -48,10 +50,4 @@ jobs:
         with:
           args: >
             -Dsonar.organization=richardfosterpersonal
-            -Dsonar.projectKey=meditracker-beta
-            -Dsonar.python.coverage.reportPaths=packages/backend/coverage.xml
-            -Dsonar.javascript.lcov.reportPaths=packages/frontend/coverage/lcov.info,packages/core/coverage/lcov.info,packages/shared/coverage/lcov.info
-            -Dsonar.sources=packages/frontend/src,packages/backend/app,packages/core/src,packages/shared/src
-            -Dsonar.tests=packages/frontend/src/__tests__,packages/backend/tests,packages/core/src/__tests__,packages/shared/src/__tests__
-            -Dsonar.test.inclusions=**/*.test.ts,**/*.spec.ts,**/tests/**,**/__tests__/**
-            -Dsonar.coverage.exclusions=**/*.test.ts,**/*.spec.ts,**/tests/**,**/__tests__/
+            -Dsonar.projectKey=richardfosterpersonal_Meditracker-beta
