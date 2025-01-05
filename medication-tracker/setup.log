@@ -1,0 +1,4 @@
+2024-12-26 17:54:22,363 [INFO] 
+Executing setup step: Python Environment
+2024-12-26 17:54:22,363 [INFO] Setting up Python environment...
+2024-12-26 17:54:28,816 [ERROR] Failed to set up Python environment: Command '['C:\\Python312\\python.exe', '-m', 'pip', 'install', '-r', 'c:\\Users\\richa\\CascadeProjects\\medication-tracker\\backend\\requirements.txt']' returned non-zero exit status 1.

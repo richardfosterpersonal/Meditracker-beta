@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "name": "Test Medication 1",
+    "dosage": "10mg",
+    "frequency": "daily",
+    "timeOfDay": "09:00",
+    "notes": "Take with food",
+    "nextDose": "2024-12-11T09:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "name": "Test Medication 2",
+    "dosage": "5mg",
+    "frequency": "twice_daily",
+    "timeOfDay": "13:00",
+    "notes": "Take after lunch",
+    "nextDose": "2024-12-10T13:00:00.000Z"
+  }
+]

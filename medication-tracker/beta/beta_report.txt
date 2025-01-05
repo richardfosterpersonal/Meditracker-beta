@@ -1,0 +1,37 @@
+Beta Test Setup Report
+Generated: 2024-12-26T14:26:42.967743
+
+Overall Status: failed
+Ready for Beta: False
+
+Validation Results:
+
+medication_safety:
+  Status: passed
+  Details:
+    - Validated dosage: {'value': 500, 'unit': 'mg'}
+    - Validated dosage: {'value': 5, 'unit': 'ml'}
+    - Validated dosage: {'value': 100, 'unit': 'mcg'}
+    - Validated frequency: {'value': 2, 'unit': 'daily'}
+    - Validated frequency: {'value': 1, 'unit': 'weekly'}
+    - Validated frequency: {'value': 4, 'unit': 'hourly'}
+    - Checked interactions: aspirin with ['warfarin']
+    - Checked interactions: ibuprofen with ['aspirin', 'naproxen']
+    - Checked interactions: acetaminophen with ['ibuprofen']
+
+security:
+  Status: error
+  Errors:
+    - 'Settings' object has no attribute 'ALGORITHM'
+  Details:
+    - Validated password hashing
+
+feature_flags:
+  Status: passed
+  Details:
+    - Feature flag configuration loaded
+
+beta_onboarding:
+  Status: passed
+  Details:
+    - Beta user configuration loaded

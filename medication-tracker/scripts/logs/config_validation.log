@@ -1,0 +1,42 @@
+2024-12-30 21:00:35,263 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 21:00:35,277 - backend.app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 21:00:35,393 - beta_logger - INFO - Starting comprehensive validation... | Context: {'timestamp': '2024-12-30T21:00:35.393121', 'environment': 'development'}
+2024-12-30 21:00:35,393 - beta_logger - INFO - Starting comprehensive validation... | Context: {'timestamp': '2024-12-30T21:00:35.393121', 'environment': 'development'}
+2024-12-30 21:00:35,393 - beta_logger - INFO - Validating dependencies... | Context: {'timestamp': '2024-12-30T21:00:35.393121', 'environment': 'development'}
+2024-12-30 21:00:35,393 - beta_logger - INFO - Validating dependencies... | Context: {'timestamp': '2024-12-30T21:00:35.393121', 'environment': 'development'}
+2024-12-30 21:00:35,394 - beta_logger - INFO - Validating critical path: backend/app/core | Context: {'timestamp': '2024-12-30T21:00:35.393121', 'environment': 'development'}
+2024-12-30 21:00:35,394 - beta_logger - INFO - Validating critical path: backend/app/core | Context: {'timestamp': '2024-12-30T21:00:35.393121', 'environment': 'development'}
+2024-12-30 21:00:35,394 - beta_logger - ERROR - Error validating backend/app/core: ValidationOrchestrator.validate_critical_path() missing 1 required positional argument: 'action' | Context: {'timestamp': '2024-12-30T21:00:35.394120', 'environment': 'development'}
+2024-12-30 21:00:35,394 - beta_logger - ERROR - Error validating backend/app/core: ValidationOrchestrator.validate_critical_path() missing 1 required positional argument: 'action' | Context: {'timestamp': '2024-12-30T21:00:35.394120', 'environment': 'development'}
+2024-12-30 21:00:35,394 - beta_logger - INFO - Validating critical path: backend/app/validation | Context: {'timestamp': '2024-12-30T21:00:35.394120', 'environment': 'development'}
+2024-12-30 21:00:35,394 - beta_logger - INFO - Validating critical path: backend/app/validation | Context: {'timestamp': '2024-12-30T21:00:35.394120', 'environment': 'development'}
+2024-12-30 21:00:35,394 - beta_logger - ERROR - Error validating backend/app/validation: ValidationOrchestrator.validate_critical_path() missing 1 required positional argument: 'action' | Context: {'timestamp': '2024-12-30T21:00:35.394120', 'environment': 'development'}
+2024-12-30 21:00:35,394 - beta_logger - ERROR - Error validating backend/app/validation: ValidationOrchestrator.validate_critical_path() missing 1 required positional argument: 'action' | Context: {'timestamp': '2024-12-30T21:00:35.394120', 'environment': 'development'}
+2024-12-30 21:00:35,394 - beta_logger - INFO - Validating critical path: backend/app/infrastructure | Context: {'timestamp': '2024-12-30T21:00:35.394120', 'environment': 'development'}
+2024-12-30 21:00:35,394 - beta_logger - INFO - Validating critical path: backend/app/infrastructure | Context: {'timestamp': '2024-12-30T21:00:35.394120', 'environment': 'development'}
+2024-12-30 21:00:35,394 - beta_logger - ERROR - Error validating backend/app/infrastructure: ValidationOrchestrator.validate_critical_path() missing 1 required positional argument: 'action' | Context: {'timestamp': '2024-12-30T21:00:35.394120', 'environment': 'development'}
+2024-12-30 21:00:35,394 - beta_logger - ERROR - Error validating backend/app/infrastructure: ValidationOrchestrator.validate_critical_path() missing 1 required positional argument: 'action' | Context: {'timestamp': '2024-12-30T21:00:35.394120', 'environment': 'development'}
+2024-12-30 21:00:35,394 - beta_logger - INFO - Validating critical path: frontend/src/core | Context: {'timestamp': '2024-12-30T21:00:35.394120', 'environment': 'development'}
+2024-12-30 21:00:35,394 - beta_logger - INFO - Validating critical path: frontend/src/core | Context: {'timestamp': '2024-12-30T21:00:35.394120', 'environment': 'development'}
+2024-12-30 21:00:35,395 - beta_logger - ERROR - Critical path does not exist: frontend/src/core | Context: {'timestamp': '2024-12-30T21:00:35.394120', 'environment': 'development'}
+2024-12-30 21:00:35,395 - beta_logger - ERROR - Critical path does not exist: frontend/src/core | Context: {'timestamp': '2024-12-30T21:00:35.394120', 'environment': 'development'}
+2024-12-30 21:00:35,395 - beta_logger - INFO - Validating critical path: beta | Context: {'timestamp': '2024-12-30T21:00:35.395120', 'environment': 'development'}
+2024-12-30 21:00:35,395 - beta_logger - INFO - Validating critical path: beta | Context: {'timestamp': '2024-12-30T21:00:35.395120', 'environment': 'development'}
+2024-12-30 21:00:35,395 - beta_logger - ERROR - Error validating beta: ValidationOrchestrator.validate_critical_path() missing 1 required positional argument: 'action' | Context: {'timestamp': '2024-12-30T21:00:35.395120', 'environment': 'development'}
+2024-12-30 21:00:35,395 - beta_logger - ERROR - Error validating beta: ValidationOrchestrator.validate_critical_path() missing 1 required positional argument: 'action' | Context: {'timestamp': '2024-12-30T21:00:35.395120', 'environment': 'development'}
+2024-12-30 21:00:35,395 - beta_logger - INFO - Validating beta component: beta_testing | Context: {'timestamp': '2024-12-30T21:00:35.395120', 'environment': 'development'}
+2024-12-30 21:00:35,395 - beta_logger - INFO - Validating beta component: beta_testing | Context: {'timestamp': '2024-12-30T21:00:35.395120', 'environment': 'development'}
+2024-12-30 21:00:35,395 - beta_logger - INFO - Pre-validation state check completed for beta_testing | Context: {'timestamp': '2024-12-30T21:00:35.395630', 'environment': 'development'}
+2024-12-30 21:00:35,395 - beta_logger - INFO - Pre-validation state check completed for beta_testing | Context: {'timestamp': '2024-12-30T21:00:35.395630', 'environment': 'development'}
+2024-12-30 21:00:35,396 - beta_logger - INFO - Validating beta component: beta_onboarding | Context: {'timestamp': '2024-12-30T21:00:35.396634', 'environment': 'development'}
+2024-12-30 21:00:35,396 - beta_logger - INFO - Validating beta component: beta_onboarding | Context: {'timestamp': '2024-12-30T21:00:35.396634', 'environment': 'development'}
+2024-12-30 21:00:35,396 - beta_logger - INFO - Pre-validation state check completed for beta_onboarding | Context: {'timestamp': '2024-12-30T21:00:35.396634', 'environment': 'development'}
+2024-12-30 21:00:35,396 - beta_logger - INFO - Pre-validation state check completed for beta_onboarding | Context: {'timestamp': '2024-12-30T21:00:35.396634', 'environment': 'development'}
+2024-12-30 21:00:35,406 - beta_logger - INFO - Validating beta component: beta_monitoring | Context: {'timestamp': '2024-12-30T21:00:35.406505', 'environment': 'development'}
+2024-12-30 21:00:35,406 - beta_logger - INFO - Validating beta component: beta_monitoring | Context: {'timestamp': '2024-12-30T21:00:35.406505', 'environment': 'development'}
+2024-12-30 21:00:35,407 - beta_logger - INFO - Pre-validation state check completed for beta_monitoring | Context: {'timestamp': '2024-12-30T21:00:35.407038', 'environment': 'development'}
+2024-12-30 21:00:35,407 - beta_logger - INFO - Pre-validation state check completed for beta_monitoring | Context: {'timestamp': '2024-12-30T21:00:35.407038', 'environment': 'development'}
+2024-12-30 21:00:35,413 - beta_logger - INFO - Validating beta component: beta_feedback | Context: {'timestamp': '2024-12-30T21:00:35.413852', 'environment': 'development'}
+2024-12-30 21:00:35,413 - beta_logger - INFO - Validating beta component: beta_feedback | Context: {'timestamp': '2024-12-30T21:00:35.413852', 'environment': 'development'}
+2024-12-30 21:00:35,414 - beta_logger - INFO - Pre-validation state check completed for beta_feedback | Context: {'timestamp': '2024-12-30T21:00:35.414372', 'environment': 'development'}
+2024-12-30 21:00:35,414 - beta_logger - INFO - Pre-validation state check completed for beta_feedback | Context: {'timestamp': '2024-12-30T21:00:35.414372', 'environment': 'development'}

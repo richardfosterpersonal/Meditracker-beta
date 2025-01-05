@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: medminder_db_dev
+    environment:
+      POSTGRES_USER: medminder_dev
+      POSTGRES_PASSWORD: dev_password
+      POSTGRES_DB: medminder_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - medminder_dev_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U medminder_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  medminder_dev_data:

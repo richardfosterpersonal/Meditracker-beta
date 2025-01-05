@@ -1,0 +1,97 @@
+Let me break down exactly how to use each feature:
+
+Now the validation system is:
+
+Fully engaged
+Referenced in all key documentation
+Integrated with git hooks
+Available through easy-to-use commands
+Documented in all relevant files
+The system can be controlled through:
+
+Code
+CopyInsert
+.\scripts\validation-control [command]
+Where command is:
+
+help - Show usage
+enable - Enable system
+disable - Disable system
+quick - 5-minute override
+override - 24-hour override
+
+
+
+First, Enable the Validation System
+Code
+CopyInsert
+# Install dependencies and set up
+npm install husky --save-dev
+npm install ts-node --save-dev
+Let's create a quick-reference script:
+
+Created
+validation-control.bat
++44
+-0
+ 0
+Open diff
+Now, here's exactly how to use each feature:
+
+1. Quick 5-Minute Override (for single commits)
+Code
+CopyInsert
+# Method 1: Using the control panel
+.\scripts\validation-control quick
+
+# Method 2: Direct command
+npm run validate --quick-override
+Use this when you need to make a quick commit without validation
+Override expires after 5 minutes
+Perfect for small, urgent changes
+2. 24-Hour Override (for longer work sessions)
+Code
+CopyInsert
+# Method 1: Using the control panel
+.\scripts\validation-control override
+
+# Method 2: Direct command
+npm run validate --create-override --hours=24 --reason="Your reason"
+
+# Then use the token it gives you:
+npm run validate --override=YOUR_TOKEN
+Use this when you need extended time without validation
+You'll get a token to use for the override period
+Good for emergency fixes or time-sensitive work
+3. Completely Disable System
+Code
+CopyInsert
+# Method 1: Using the control panel
+.\scripts\validation-control disable
+
+# Method 2: Direct command
+npm run validate --disable --user="YourName" --reason="Your reason"
+Use this to turn off validation completely
+System stays disabled until explicitly re-enabled
+Good for development phases or testing periods
+4. Re-Enable System
+Code
+CopyInsert
+# Method 1: Using the control panel
+.\scripts\validation-control enable
+
+# Method 2: Direct command
+npm run validate --enable
+Use this to turn validation back on
+All overrides are cleared
+System returns to normal operation
+Quick Help
+Code
+CopyInsert
+# Show all commands
+.\scripts\validation-control help
+The control panel script makes it easy to remember and use these commands. You can:
+
+Put it in your PATH for easy access
+Create desktop shortcuts to common commands
+Use it from any terminal in your project

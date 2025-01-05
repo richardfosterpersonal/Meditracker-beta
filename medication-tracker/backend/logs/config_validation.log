@@ -1,0 +1,7 @@
+2024-12-27 20:29:03,584 - app.core.config - INFO - Configuration initialized successfully
+2024-12-27 20:30:53,461 - app.core.config - INFO - Configuration initialized successfully
+2024-12-27 21:07:21,115 - app.core.config - INFO - Configuration initialized successfully
+2024-12-27 21:07:47,375 - app.core.config - INFO - Configuration initialized successfully
+2024-12-27 21:31:19,356 - app.core.config - INFO - Configuration initialized successfully
+2024-12-27 21:32:26,714 - app.core.config - INFO - Configuration initialized successfully
+2024-12-27 22:31:27,565 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'

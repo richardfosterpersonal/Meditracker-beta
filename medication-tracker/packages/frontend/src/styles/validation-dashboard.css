@@ -1,0 +1,131 @@
+/**
+ * Validation Dashboard Styles
+ * Last Updated: 2024-12-25T20:41:19+01:00
+ * Status: BETA
+ * Reference: ../../../docs/validation/critical_path/MASTER_CRITICAL_PATH.md
+ */
+
+.validation-dashboard {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.validation-summary {
+  margin-bottom: 30px;
+}
+
+.validation-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.validation-progress {
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
+  transition: width 0.3s ease;
+}
+
+.validation-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-item {
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-item.aligned {
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.stat-item.outdated {
+  background: rgba(255, 152, 0, 0.1);
+}
+
+.stat-item.invalid {
+  background: rgba(244, 67, 54, 0.1);
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.validation-details {
+  margin-top: 30px;
+}
+
+.detail-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.detail-section.outdated {
+  background: rgba(255, 152, 0, 0.05);
+  border: 1px solid rgba(255, 152, 0, 0.2);
+}
+
+.detail-section.invalid {
+  background: rgba(244, 67, 54, 0.05);
+  border: 1px solid rgba(244, 67, 54, 0.2);
+}
+
+.detail-section h3 {
+  margin: 0 0 15px;
+  color: #333;
+}
+
+.detail-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.detail-section li {
+  padding: 8px 0;
+  font-family: monospace;
+  font-size: 14px;
+  color: #666;
+}
+
+.validation-loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.validation-error {
+  text-align: center;
+  padding: 40px;
+  color: #f44336;
+  background: rgba(244, 67, 54, 0.05);
+  border-radius: 8px;
+}

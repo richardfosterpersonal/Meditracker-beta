@@ -1,0 +1,54 @@
+name: Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Validate Exception System
+      run: |
+        python -c "from backend.app.core.validation_enforcer import enforce_validation; import sys; sys.exit(0 if enforce_validation() else 1)"
+        
+    - name: Check for Multiple Exception Files
+      run: |
+        count=$(find backend/app -name "exceptions.py" | wc -l)
+        if [ "$count" -gt 1 ]; then
+          echo "Error: Multiple exception files found"
+          find backend/app -name "exceptions.py"
+          exit 1
+        fi
+        
+    - name: Validate Exception Imports
+      run: |
+        python -c '
+        import ast, sys, glob
+        valid = True
+        for file in glob.glob("backend/app/**/*.py", recursive=True):
+            if file.endswith("exceptions.py"):
+                continue
+            with open(file) as f:
+                for line in f:
+                    if "import" in line and "exceptions" in line:
+                        if "backend.app.exceptions" not in line:
+                            print(f"Invalid exception import in {file}: {line.strip()}")
+                            valid = False
+        sys.exit(0 if valid else 1)
+        '

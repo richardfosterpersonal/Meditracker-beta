@@ -1,0 +1,205 @@
+repos:
+-   repo: local
+    hooks:
+    -   id: scope-validation
+        name: Scope Validation
+        entry: python backend/scripts/sonar-scope-check.py
+        language: system
+        files: \.py$
+        args: [backend/app]
+        
+    -   id: critical-path-check
+        name: Critical Path Check
+        entry: python -c "
+            import sys
+            from pathlib import Path
+            
+            def check_critical_path():
+                critical_path = Path('docs/CRITICAL_PATH.md')
+                if not critical_path.exists():
+                    print('Critical path document missing')
+                    return False
+                    
+                with open(critical_path) as f:
+                    content = f.read()
+                    if '[ ]' in content:
+                        print('Unchecked items in critical path')
+                        return False
+                
+                return True
+            
+            if not check_critical_path():
+                sys.exit(1)
+            "
+        language: system
+        pass_filenames: false
+        
+    -   id: validation-docs-check
+        name: Validation Docs Check
+        entry: python -c "
+            from backend.app.core.scope_validation import validate_feature_addition, FeatureCategory
+            import os
+            import sys
+            
+            def check_new_features():
+                changed_files = os.popen('git diff --cached --name-only').read().splitlines()
+                
+                for file in changed_files:
+                    if file.endswith('.py'):
+                        with open(file, 'r') as f:
+                            content = f.read()
+                            if 'class' in content and not any(
+                                os.path.exists(f'docs/validation/{name}_validation.md')
+                                for name in [line.split('class')[1].split(':')[0].strip()
+                                           for line in content.split('\n')
+                                           if line.strip().startswith('class')]
+                            ):
+                                print(f'New feature detected in {file} without validation')
+                                sys.exit(1)
+                
+                return True
+            
+            if not check_new_features():
+                sys.exit(1)
+            "
+        language: system
+        pass_filenames: false
+        
+    -   id: validate-exceptions
+        name: Validate Exception System
+        entry: python -c "from backend.app.core.validation_enforcer import enforce_validation; import sys; sys.exit(0 if enforce_validation() else 1)"
+        language: python
+        pass_filenames: false
+        always_run: true
+        stages: [commit]
+        
+    -   id: validate-imports
+        name: Validate Exception Imports
+        entry: python -c "import ast, sys; sys.exit(0 if all('exceptions' not in line or 'backend.app.exceptions' in line for line in open(sys.argv[1]).readlines() if 'import' in line) else 1)"
+        language: python
+        files: \.py$
+        exclude: ^backend/app/exceptions\.py$
+        stages: [commit]
+        
+    -   id: enforce-conversation-guidelines
+        name: Enforce Conversation Guidelines
+        entry: python -c "
+            from backend.app.core.conversation_enforcer import ConversationEnforcer
+            from pathlib import Path
+            import sys
+            
+            def enforce_guidelines():
+                enforcer = ConversationEnforcer(Path.cwd())
+                results = enforcer.validate_guidelines()
+                
+                if not results['valid']:
+                    print('Conversation guidelines validation failed:')
+                    for rec in results['results']['recommendations']:
+                        print(f'- {rec['guideline']}: {rec['recommendation']}')
+                    return False
+                return True
+            
+            if not enforce_guidelines():
+                sys.exit(1)
+            "
+        language: python
+        pass_filenames: false
+        always_run: true
+        stages: [commit]
+        
+    -   id: enforce-debug-practices
+        name: Enforce Debug Practices
+        entry: python -c "
+            from backend.app.core.debug_validation import DebugValidator
+            from pathlib import Path
+            import sys
+            
+            def enforce_debug_practices():
+                validator = DebugValidator(Path.cwd())
+                results = validator.validate_debug_practices()
+                
+                if not results['valid']:
+                    print('Debug practices validation failed:')
+                    for issue in results['results']['issues_found']:
+                        print(f'- {issue['file']}: {issue['issue']}')
+                        if 'details' in issue:
+                            print(f'  Details: {issue['details']}')
+                    return False
+                return True
+            
+            if not enforce_debug_practices():
+                sys.exit(1)
+            "
+        language: python
+        pass_filenames: false
+        always_run: true
+        stages: [commit]
+        
+    -   id: proactive-analysis-check
+        name: Check for Proactive Analysis
+        entry: python -c "
+            import ast
+            import sys
+            
+            def has_proactive_analysis(file_path):
+                with open(file_path) as f:
+                    tree = ast.parse(f.read())
+                
+                class ProactiveAnalyzer(ast.NodeVisitor):
+                    def __init__(self):
+                        self.has_analysis = False
+                        
+                    def visit_FunctionDef(self, node):
+                        docstring = ast.get_docstring(node)
+                        if docstring and any(word in docstring.lower() 
+                                           for word in ['analyze', 'validate', 'check']):
+                            self.has_analysis = True
+                        self.generic_visit(node)
+                
+                analyzer = ProactiveAnalyzer()
+                analyzer.visit(tree)
+                return analyzer.has_analysis
+            
+            if not has_proactive_analysis(sys.argv[1]):
+                print(f'{sys.argv[1]}: No proactive analysis found')
+                sys.exit(1)
+            "
+        language: python
+        files: \.py$
+        exclude: ^(tests/|docs/)
+
+    -   id: validate-commit-message
+        name: Validate Commit Message
+        entry: python -c "
+            from backend.app.core.commit_validator import CommitValidator
+            import sys
+            import os
+            
+            def validate_commit_msg():
+                # Get commit message
+                msg_file = os.getenv('GIT_MESSAGE_FILE', '.git/COMMIT_EDITMSG')
+                if not os.path.exists(msg_file):
+                    print('No commit message file found')
+                    return False
+                    
+                with open(msg_file) as f:
+                    msg = f.read()
+                    
+                validator = CommitValidator()
+                results = validator.validate_commit_message(msg)
+                
+                if not results['valid']:
+                    print('Commit message validation failed:')
+                    for error in results['errors']:
+                        print(f'Error: {error}')
+                    for warning in results['warnings']:
+                        print(f'Warning: {warning}')
+                    return False
+                return True
+                
+            if not validate_commit_msg():
+                sys.exit(1)
+            "
+        language: python
+        pass_filenames: false
+        stages: [commit-msg]

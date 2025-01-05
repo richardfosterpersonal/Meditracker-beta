@@ -1,0 +1,63 @@
+version: "1.0"
+last_updated: "2025-01-02T13:15:28+01:00"
+
+# This manifest is the single source of truth for all validation requirements
+# It MUST be used by all validation components
+
+critical_paths:
+  Beta.Validation:
+    enforced: true
+    requirements:
+      environment:
+        - JWT_SECRET_KEY
+        - DATABASE_URL
+        - BETA_MODE
+        - BETA_ACCESS_KEY
+        - VALIDATION_INTERVAL
+        - BACKUP_INTERVAL
+      directories:
+        - /validation_evidence
+        - /beta_evidence
+        - /metrics
+      dependencies:
+        - aiohttp
+        - attrs
+        - pyyaml
+    validation_hooks:
+      - pre_beta_validation
+      - post_beta_validation
+      - beta_phase_transition
+
+  Beta.Recovery:
+    enforced: true
+    requirements:
+      backup:
+        interval: 5  # minutes
+        retention: 24 # hours
+      monitoring:
+        interval: 1  # minute
+        metrics:
+          - system_health
+          - user_activity
+          - error_rates
+    recovery_hooks:
+      - pre_recovery
+      - post_recovery
+      - recovery_validation
+
+  Beta.Evidence:
+    enforced: true
+    requirements:
+      collection:
+        interval: 1  # minute
+        types:
+          - validation_results
+          - system_metrics
+          - user_feedback
+      storage:
+        retention: 30  # days
+        format: json
+    evidence_hooks:
+      - pre_collection
+      - post_collection
+      - evidence_validation

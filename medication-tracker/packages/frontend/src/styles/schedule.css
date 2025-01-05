@@ -1,0 +1,216 @@
+/**
+ * Schedule Component Styles
+ * Last Updated: 2024-12-25T20:36:19+01:00
+ * Status: BETA
+ * Reference: ../../../docs/validation/critical_path/MASTER_CRITICAL_PATH.md
+ *
+ * Implements critical path requirements for schedule styling:
+ * 1. User Safety: Clear validation states
+ * 2. Data Safety: Input clarity
+ * 3. System Stability: Feedback states
+ */
+
+/* Critical Path: Form Layout */
+.schedule-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Critical Path: Input Safety */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* Critical Path: Validation States */
+.form-group input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+}
+
+.form-group input.error {
+    border-color: #dc3545;
+    background-color: #fff8f8;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 5px 0;
+}
+
+/* Critical Path: Action Buttons */
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.submit-button,
+.cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #357abd;
+}
+
+.submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.cancel-button {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.cancel-button:hover {
+    background-color: #e9ecef;
+}
+
+/* Critical Path: Schedule List */
+.schedule-list {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.schedules {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.schedule-item {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Critical Path: Time Display */
+.schedule-time {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Critical Path: Status Indicators */
+.schedule-status {
+    font-size: 14px;
+}
+
+.taken {
+    color: #28a745;
+}
+
+.not-taken {
+    color: #dc3545;
+}
+
+/* Critical Path: Action Buttons */
+.schedule-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.take-button,
+.edit-button,
+.delete-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.take-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.take-button:hover {
+    background-color: #218838;
+}
+
+.edit-button {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Critical Path: Loading States */
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+.no-schedules {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Critical Path: Responsive Design */
+@media (max-width: 768px) {
+    .schedule-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .schedule-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,140 @@
+/**
+ * Validation Feedback Styles
+ * Last Updated: 2024-12-25T20:45:12+01:00
+ * Status: STABLE
+ * Reference: ../../../docs/validation/critical_path/MASTER_CRITICAL_PATH.md
+ */
+
+.validation-feedback {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 8px 0;
+  animation: slidein 0.3s ease-out;
+}
+
+/* Critical Path: Status Colors */
+.validation-feedback.success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.validation-feedback.error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.validation-feedback.warning {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+}
+
+.validation-feedback.info {
+  background-color: #cce5ff;
+  border: 1px solid #b8daff;
+  color: #004085;
+}
+
+/* Critical Path: Icon Styling */
+.feedback-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.success .feedback-icon {
+  background-color: #28a745;
+  color: white;
+}
+
+.error .feedback-icon {
+  background-color: #dc3545;
+  color: white;
+}
+
+.warning .feedback-icon {
+  background-color: #ffc107;
+  color: #856404;
+}
+
+.info .feedback-icon {
+  background-color: #17a2b8;
+  color: white;
+}
+
+/* Critical Path: Content Layout */
+.feedback-content {
+  flex-grow: 1;
+}
+
+.feedback-message {
+  margin: 0;
+  font-weight: 500;
+}
+
+.feedback-details {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  font-size: 0.9em;
+}
+
+.feedback-details li {
+  margin-bottom: 4px;
+}
+
+/* Critical Path: Close Button */
+.feedback-close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 20px;
+  padding: 0 4px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.feedback-close:hover {
+  opacity: 1;
+}
+
+/* Critical Path: Animations */
+@keyframes slidein {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Critical Path: Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .validation-feedback {
+    animation: none;
+  }
+}
+
+/* Critical Path: Screen Reader Support */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: medication-tracker-beta
+  namespace: beta
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: medication-tracker-beta
+  template:
+    metadata:
+      labels:
+        app: medication-tracker-beta
+    spec:
+      containers:
+      - name: medication-tracker
+        image: medication-tracker:beta
+        ports:
+        - containerPort: 8080
+        env:
+        - name: NODE_ENV
+          value: "beta"
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: beta-secrets
+              key: database-url
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 20

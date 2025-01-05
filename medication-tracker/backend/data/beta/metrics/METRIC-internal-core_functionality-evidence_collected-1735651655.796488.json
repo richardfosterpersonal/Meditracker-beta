@@ -1,0 +1,11 @@
+{
+  "metric_id": "METRIC-internal-core_functionality-evidence_collected-1735651655.796488",
+  "phase_id": "internal",
+  "component": "core_functionality",
+  "name": "evidence_collected",
+  "value": 1.0,
+  "metadata": {
+    "validation_id": "BETA-internal-core_functionality-1735651655.795953"
+  },
+  "timestamp": "2024-12-31T14:27:35.796488"
+}

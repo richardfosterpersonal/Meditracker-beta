@@ -1,0 +1,11 @@
+{
+  "metric_id": "METRIC-internal-evidence-initialization-1735651542.286561",
+  "phase_id": "internal",
+  "component": "evidence",
+  "name": "initialization",
+  "value": 1.0,
+  "metadata": {
+    "status": "initialized"
+  },
+  "timestamp": "2024-12-31T14:25:42.286561"
+}

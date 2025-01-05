@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana-beta
+  namespace: beta
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grafana-beta
+  template:
+    metadata:
+      labels:
+        app: grafana-beta
+    spec:
+      containers:
+      - name: grafana
+        image: grafana/grafana:9.5.3
+        ports:
+        - containerPort: 3000
+        env:
+        - name: GF_SECURITY_ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: beta-secrets
+              key: grafana-admin-password
+        - name: GF_AUTH_ANONYMOUS_ENABLED
+          value: "false"
+        volumeMounts:
+        - name: grafana-storage
+          mountPath: /var/lib/grafana
+        - name: grafana-provisioning
+          mountPath: /etc/grafana/provisioning
+      volumes:
+      - name: grafana-storage
+        persistentVolumeClaim:
+          claimName: grafana-storage-claim
+      - name: grafana-provisioning
+        configMap:
+          name: grafana-provisioning

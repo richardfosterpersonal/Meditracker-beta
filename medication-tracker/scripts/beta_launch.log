@@ -1,0 +1,2 @@
+2025-01-02 13:51:24,351 [CRITICAL] Unhandled exception during health checks: name 'ValidationHooks' is not defined
+2025-01-02 13:52:55,469 [CRITICAL] Unhandled exception during health checks: name 'ValidationHooks' is not defined

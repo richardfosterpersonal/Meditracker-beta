@@ -1,0 +1,11 @@
+{
+  "metric_id": "METRIC-internal-safety_protocols-evidence_collected-1735651655.795434",
+  "phase_id": "internal",
+  "component": "safety_protocols",
+  "name": "evidence_collected",
+  "value": 1.0,
+  "metadata": {
+    "validation_id": "BETA-internal-safety_protocols-1735651655.794398"
+  },
+  "timestamp": "2024-12-31T14:27:35.795434"
+}

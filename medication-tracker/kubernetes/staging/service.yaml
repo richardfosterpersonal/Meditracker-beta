@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: medication-tracker
+  namespace: medication-tracker-staging
+spec:
+  selector:
+    app: medication-tracker
+  ports:
+  - port: 80
+    targetPort: 3000
+  type: ClusterIP

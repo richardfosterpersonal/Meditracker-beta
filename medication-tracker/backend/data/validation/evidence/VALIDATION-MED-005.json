@@ -1,0 +1,14 @@
+{
+  "timestamp": "2024-12-25T20:26:20.521026+00:00",
+  "validation_id": "VALIDATION-MED-005",
+  "data": {
+    "schedule": {
+      "frequency": 2,
+      "interval_hours": 12,
+      "medication_name": "test_med"
+    },
+    "existing": null
+  },
+  "validation_status": "complete",
+  "details": {}
+}

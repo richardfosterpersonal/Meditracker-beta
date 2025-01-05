@@ -1,0 +1,101 @@
+2025-01-02 10:38:12,849 [INFO] Starting beta launch process...
+2025-01-02 10:38:12,850 [INFO] Validating launch plan...
+2025-01-02 10:38:13,411 [INFO] Registered hook: conversation_guidelines
+2025-01-02 10:38:13,413 [INFO] Registered hook: debug_practices
+2025-01-02 10:38:13,413 [INFO] Registered hook: process
+2025-01-02 10:38:13,413 [INFO] Registered hook: documentation
+2025-01-02 10:38:13,413 [INFO] Registered hook: dependencies
+2025-01-02 10:38:13,413 [INFO] Core hooks registered
+2025-01-02 10:38:13,416 [WARNING] Failed to analyze hook complexity: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,416 [WARNING] Failed to analyze error handling: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,417 [WARNING] Failed to analyze dependencies: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,417 [WARNING] Failed to analyze hook complexity: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,417 [WARNING] Failed to analyze error handling: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,418 [WARNING] Failed to analyze dependencies: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,418 [WARNING] Failed to analyze hook complexity: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,419 [WARNING] Failed to analyze error handling: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,419 [WARNING] Failed to analyze dependencies: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,420 [WARNING] Failed to analyze hook complexity: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,420 [WARNING] Failed to analyze error handling: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,420 [WARNING] Failed to analyze dependencies: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,421 [WARNING] Failed to analyze hook complexity: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,421 [WARNING] Failed to analyze error handling: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,422 [WARNING] Failed to analyze dependencies: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-01-02 10:38:13,425 [ERROR] Failed to register hook documentation: Hook documentation already registered
+2025-01-02 10:38:13,425 [ERROR] Failed to initialize validation framework: Hook registration failed: Hook documentation already registered
+2025-01-02 10:38:13,425 [ERROR] Beta launch failed: Hook registration failed: Hook documentation already registered
+2025-01-02 10:38:13,425 [ERROR] Launch script failed: Hook registration failed: Hook documentation already registered
+2025-01-02 10:39:43,802 [INFO] Starting beta launch process...
+2025-01-02 10:39:43,802 [INFO] Validating launch plan...
+2025-01-02 10:39:44,340 [INFO] Validation hooks initialized
+2025-01-02 10:39:44,340 [INFO] Registered hook: conversation_guidelines
+2025-01-02 10:39:44,340 [INFO] Registered hook: debug_practices
+2025-01-02 10:39:44,340 [INFO] Registered hook: process
+2025-01-02 10:39:44,340 [INFO] Registered hook: documentation
+2025-01-02 10:39:44,340 [INFO] Registered hook: dependencies
+2025-01-02 10:39:44,340 [INFO] Core hooks registered
+2025-01-02 10:39:44,343 [WARNING] Hook documentation already registered, skipping
+2025-01-02 10:39:44,343 [INFO] Registered hook: architecture
+2025-01-02 10:39:44,343 [WARNING] Hook dependencies already registered, skipping
+2025-01-02 10:39:44,353 [INFO] Validation hooks initialized
+2025-01-02 10:39:44,353 [INFO] Registered hook: conversation_guidelines
+2025-01-02 10:39:44,353 [INFO] Registered hook: debug_practices
+2025-01-02 10:39:44,353 [INFO] Registered hook: process
+2025-01-02 10:39:44,353 [INFO] Registered hook: documentation
+2025-01-02 10:39:44,353 [INFO] Registered hook: dependencies
+2025-01-02 10:39:44,353 [INFO] Core hooks registered
+2025-01-02 10:39:44,353 [ERROR] Failed to import launch plan validator: Cannot import exceptions from app.exceptions. All exceptions must be imported from backend.app.exceptions
+2025-01-02 10:39:44,354 [ERROR] Please ensure project root is in PYTHONPATH
+2025-01-02 10:39:44,354 [ERROR] Project root: c:\Users\richa\CascadeProjects\medication-tracker
+2025-01-02 10:39:44,354 [ERROR] Current PYTHONPATH: ['c:\\Users\\richa\\CascadeProjects\\medication-tracker', 'c:\\Users\\richa\\CascadeProjects\\medication-tracker\\backend\\scripts', 'C:\\Python312\\python312.zip', 'C:\\Python312\\DLLs', 'C:\\Python312\\Lib', 'C:\\Python312', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32\\lib', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\Pythonwin', 'C:\\Python312\\Lib\\site-packages']
+2025-01-02 10:43:17,808 [INFO] Starting beta launch process...
+2025-01-02 10:43:18,281 [INFO] Validation hooks initialized
+2025-01-02 10:43:18,281 [INFO] Registered hook: conversation_guidelines
+2025-01-02 10:43:18,281 [INFO] Registered hook: debug_practices
+2025-01-02 10:43:18,281 [INFO] Registered hook: process
+2025-01-02 10:43:18,281 [INFO] Registered hook: documentation
+2025-01-02 10:43:18,281 [INFO] Registered hook: dependencies
+2025-01-02 10:43:18,281 [INFO] Core hooks registered
+2025-01-02 10:43:18,281 [ERROR] Failed to import launch manager: cannot import name 'DocumentationError' from 'backend.app.exceptions' (c:\Users\richa\CascadeProjects\medication-tracker\backend\app\exceptions.py)
+2025-01-02 10:43:18,281 [ERROR] Please ensure project root is in PYTHONPATH
+2025-01-02 10:43:18,281 [ERROR] Project root: c:\Users\richa\CascadeProjects\medication-tracker
+2025-01-02 10:43:18,282 [ERROR] Current PYTHONPATH: ['c:\\Users\\richa\\CascadeProjects\\medication-tracker', 'c:\\Users\\richa\\CascadeProjects\\medication-tracker\\backend\\scripts', 'C:\\Python312\\python312.zip', 'C:\\Python312\\DLLs', 'C:\\Python312\\Lib', 'C:\\Python312', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32\\lib', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\Pythonwin', 'C:\\Python312\\Lib\\site-packages']
+2025-01-02 10:47:36,372 [INFO] Starting beta launch process...
+2025-01-02 10:47:36,849 [ERROR] Failed to import launch manager: cannot import name 'HookCompetencyError' from 'backend.app.exceptions' (c:\Users\richa\CascadeProjects\medication-tracker\backend\app\exceptions.py)
+2025-01-02 10:47:36,850 [ERROR] Please ensure project root is in PYTHONPATH
+2025-01-02 10:47:36,850 [ERROR] Project root: c:\Users\richa\CascadeProjects\medication-tracker
+2025-01-02 10:47:36,850 [ERROR] Current PYTHONPATH: ['c:\\Users\\richa\\CascadeProjects\\medication-tracker', 'c:\\Users\\richa\\CascadeProjects\\medication-tracker\\backend\\scripts', 'C:\\Python312\\python312.zip', 'C:\\Python312\\DLLs', 'C:\\Python312\\Lib', 'C:\\Python312', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32\\lib', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\Pythonwin', 'C:\\Python312\\Lib\\site-packages']
+2025-01-02 10:49:53,696 [INFO] Starting beta launch process...
+2025-01-02 10:49:54,169 [INFO] Validation hooks initialized
+2025-01-02 10:49:54,169 [INFO] Registered hook: conversation_guidelines
+2025-01-02 10:49:54,169 [INFO] Registered hook: debug_practices
+2025-01-02 10:49:54,169 [INFO] Registered hook: process
+2025-01-02 10:49:54,169 [INFO] Registered hook: documentation
+2025-01-02 10:49:54,170 [INFO] Registered hook: dependencies
+2025-01-02 10:49:54,170 [INFO] Core hooks registered
+2025-01-02 10:49:54,170 [ERROR] Failed to import launch manager: cannot import name 'HookCompetencyLevel' from 'backend.app.core.validation_hooks' (c:\Users\richa\CascadeProjects\medication-tracker\backend\app\core\validation_hooks.py)
+2025-01-02 10:49:54,170 [ERROR] Please ensure project root is in PYTHONPATH
+2025-01-02 10:49:54,170 [ERROR] Project root: c:\Users\richa\CascadeProjects\medication-tracker
+2025-01-02 10:49:54,170 [ERROR] Current PYTHONPATH: ['c:\\Users\\richa\\CascadeProjects\\medication-tracker', 'c:\\Users\\richa\\CascadeProjects\\medication-tracker\\backend\\scripts', 'C:\\Python312\\python312.zip', 'C:\\Python312\\DLLs', 'C:\\Python312\\Lib', 'C:\\Python312', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32\\lib', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\Pythonwin', 'C:\\Python312\\Lib\\site-packages']
+2025-01-02 10:52:40,763 [INFO] Starting beta launch process...
+2025-01-02 10:52:41,276 [INFO] Registered hook: conversation_guidelines
+2025-01-02 10:52:41,277 [INFO] Registered hook: debug_practices
+2025-01-02 10:52:41,277 [INFO] Registered hook: process
+2025-01-02 10:52:41,277 [INFO] Registered hook: documentation
+2025-01-02 10:52:41,277 [INFO] Registered hook: dependencies
+2025-01-02 10:52:41,277 [INFO] Core hooks registered
+2025-01-02 10:52:41,277 [ERROR] Failed to import launch manager: cannot import name 'HookCompetencyLevel' from 'backend.app.core.validation_hooks' (c:\Users\richa\CascadeProjects\medication-tracker\backend\app\core\validation_hooks.py)
+2025-01-02 10:52:41,277 [ERROR] Please ensure project root is in PYTHONPATH
+2025-01-02 10:52:41,277 [ERROR] Project root: c:\Users\richa\CascadeProjects\medication-tracker
+2025-01-02 10:52:41,277 [ERROR] Current PYTHONPATH: ['c:\\Users\\richa\\CascadeProjects\\medication-tracker', 'c:\\Users\\richa\\CascadeProjects\\medication-tracker\\backend\\scripts', 'C:\\Python312\\python312.zip', 'C:\\Python312\\DLLs', 'C:\\Python312\\Lib', 'C:\\Python312', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32\\lib', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\Pythonwin', 'C:\\Python312\\Lib\\site-packages']
+2025-01-02 10:57:57,873 [INFO] Starting beta launch process...
+2025-01-02 10:57:58,336 [INFO] Registered hook: conversation_guidelines
+2025-01-02 10:57:58,336 [INFO] Registered hook: debug_practices
+2025-01-02 10:57:58,336 [INFO] Registered hook: process
+2025-01-02 10:57:58,336 [INFO] Registered hook: documentation
+2025-01-02 10:57:58,336 [INFO] Registered hook: dependencies
+2025-01-02 10:57:58,336 [INFO] Core hooks registered
+2025-01-02 10:57:58,336 [ERROR] Failed to import launch manager: cannot import name 'HookCompetencyLevel' from 'backend.app.core.validation_hooks' (c:\Users\richa\CascadeProjects\medication-tracker\backend\app\core\validation_hooks.py)
+2025-01-02 10:57:58,336 [ERROR] Please ensure project root is in PYTHONPATH
+2025-01-02 10:57:58,336 [ERROR] Project root: c:\Users\richa\CascadeProjects\medication-tracker
+2025-01-02 10:57:58,336 [ERROR] Current PYTHONPATH: ['c:\\Users\\richa\\CascadeProjects\\medication-tracker', 'c:\\Users\\richa\\CascadeProjects\\medication-tracker\\backend\\scripts', 'C:\\Python312\\python312.zip', 'C:\\Python312\\DLLs', 'C:\\Python312\\Lib', 'C:\\Python312', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32\\lib', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\Pythonwin', 'C:\\Python312\\Lib\\site-packages']

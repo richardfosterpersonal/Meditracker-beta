@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: medication-tracker
+  namespace: medication-tracker-staging
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: medication-tracker
+  template:
+    metadata:
+      labels:
+        app: medication-tracker
+    spec:
+      containers:
+      - name: medication-tracker
+        image: ghcr.io/owner/medication-tracker:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NODE_ENV
+          value: staging
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: medication-tracker-secrets
+              key: database-url
+        - name: REDIS_URL
+          valueFrom:
+            secretKeyRef:
+              name: medication-tracker-secrets
+              key: redis-url
+        - name: JWT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: medication-tracker-secrets
+              key: jwt-secret
+        resources:
+          requests:
+            cpu: 100m
+            memory: 256Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+      imagePullSecrets:
+      - name: github-registry

@@ -1,0 +1,83 @@
+name: Scope Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  validate-scope:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt
+          
+      - name: Run scope validation
+        run: |
+          python backend/scripts/sonar-scope-check.py backend/app
+          
+      - name: Check validation documents
+        run: |
+          python -c "
+          from backend.app.core.scope_validation import validate_feature_addition, FeatureCategory
+          import os
+          import sys
+          
+          def check_new_features():
+              # Get list of changed files
+              changed_files = os.popen('git diff --name-only HEAD^').read().splitlines()
+              
+              # Check for new features in changed files
+              for file in changed_files:
+                  if file.endswith('.py'):
+                      with open(file, 'r') as f:
+                          content = f.read()
+                          # Simple check for new feature indicators
+                          if 'class' in content and not any(
+                              os.path.exists(f'docs/validation/{name}_validation.md')
+                              for name in [line.split('class')[1].split(':')[0].strip()
+                                         for line in content.split('\n')
+                                         if line.strip().startswith('class')]
+                          ):
+                              print(f'New feature detected in {file} without validation')
+                              sys.exit(1)
+              
+              return True
+          
+          if not check_new_features():
+              sys.exit(1)
+          "
+          
+      - name: Validate critical path compliance
+        run: |
+          python -c "
+          import sys
+          from pathlib import Path
+          
+          def check_critical_path():
+              critical_path = Path('docs/CRITICAL_PATH.md')
+              if not critical_path.exists():
+                  print('Critical path document missing')
+                  return False
+                  
+              with open(critical_path) as f:
+                  content = f.read()
+                  if '[ ]' in content:
+                      print('Unchecked items in critical path')
+                      return False
+              
+              return True
+          
+          if not check_critical_path():
+              sys.exit(1)
+          "

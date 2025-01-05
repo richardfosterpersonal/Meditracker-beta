@@ -1,0 +1,238 @@
+# Medication Tracker Application - Development Context
+
+## Introduction
+This is a continuation of the development session for the Medication Tracker application. The previous session focused on implementing and validating the beta testing infrastructure, particularly the Beta Critical Path Orchestrator. We've established comprehensive pre-validation checks, runtime validation, and post-validation processes across the application. The codebase is currently stable and follows all established guidelines for HIPAA compliance, security, and performance.
+
+## Non-Technical Description
+The Medication Tracker is a comprehensive healthcare application designed to help users manage their medication schedules effectively and safely. It provides:
+- Personalized medication scheduling and reminders
+- Secure tracking of medication adherence
+- Custom medication management
+- Real-time notifications and alerts
+- Healthcare provider integration
+- Comprehensive reporting and analytics
+- HIPAA-compliant data handling
+
+The application aims to improve medication adherence, reduce errors, and provide better health outcomes through careful tracking and timely reminders.
+
+## Project Structure
+
+### Project Root Directory
+c:/Users/richa/CascadeProjects/medication-tracker/
+
+### Backend (c:/Users/richa/CascadeProjects/medication-tracker/backend/app/)
+1. Core Components:
+   - Beta Orchestrator: /core/beta_critical_path_orchestrator.py
+   - Beta Settings: /core/beta_settings.py
+   - Beta Evidence: /core/beta_validation_evidence.py
+   - Database Config: /database.py
+   - Main Application: /main.py
+
+2. Models:
+   - Custom Medication: /models/custom_medication.py
+   - User Model: /models/user.py
+   - Schedule Model: /models/schedule.py
+
+3. Routes:
+   - Custom Medication: /routes/custom_medication.py
+   - Authentication: /routes/auth.py
+   - Schedule: /routes/schedule.py
+
+4. Infrastructure:
+   - Push Notifications: /infrastructure/notification/push_sender.py
+   - Email Service: /infrastructure/notification/email_sender.py
+   - SMS Service: /infrastructure/notification/sms_sender.py
+
+### Frontend (c:/Users/richa/CascadeProjects/medication-tracker/frontend/)
+1. Core Components:
+   - App Entry: /src/App.tsx
+   - Routes: /src/routes/
+   - Store: /src/store/
+
+2. Components:
+   - Schedule Builder: /src/components/ScheduleBuilder.tsx
+   - Medication Form: /src/components/MedicationForm.tsx
+   - Reminder Setup: /src/components/ReminderSetup.tsx
+
+### Configuration and Data
+1. Environment Files:
+   - Production: /.env.production
+   - Development: /.env.development
+   - Beta: /.env.beta
+   - Template: /.env.template
+
+2. Data Directories:
+   - Beta Testing: /backend/data/beta/
+   - Application Data: /backend/data/db/
+   - Logs: /logs/
+
+## Technical Architecture
+
+### Backend Architecture (Python/FastAPI)
+1. Core Components:
+   - Beta Critical Path Orchestrator (Manages beta testing phases)
+   - Validation Framework (Pre-validation, runtime validation)
+   - Authentication & Authorization
+   - Custom Medication Management
+   - Notification System
+   - Data Access Layer
+
+2. Infrastructure:
+   - Database: PostgreSQL with SQLAlchemy ORM
+   - Caching: Redis
+   - Message Queue: RabbitMQ
+   - Monitoring: Prometheus/Grafana
+   - Logging: ELK Stack
+
+### Frontend Architecture (React/TypeScript)
+1. Core Features:
+   - Medication Schedule Builder
+   - Reminder Management
+   - User Dashboard
+   - Reports & Analytics
+   - Provider Integration
+
+2. Technical Stack:
+   - State Management: Redux
+   - UI Framework: Material-UI
+   - Form Validation: Formik/Yup
+   - API Integration: Axios
+   - PWA Support
+
+## Critical Paths and Validation
+
+### Beta Testing Critical Path
+1. ONBOARDING Phase:
+   - Internal testing
+   - Code coverage validation
+   - Performance metrics
+   - Security scanning
+
+2. CORE_FEATURES Phase:
+   - Feature validation
+   - Integration testing
+   - User acceptance testing
+
+3. DATA_SAFETY Phase:
+   - Security compliance
+   - Data integrity checks
+   - Privacy validation
+
+4. USER_EXPERIENCE Phase:
+   - Usability testing
+   - Performance optimization
+   - Accessibility compliance
+
+### Validation Framework
+1. Pre-validation:
+   - Directory structure
+   - Configuration integrity
+   - Dependencies
+   - Environment setup
+
+2. Runtime validation:
+   - Data integrity
+   - State transitions
+   - User inputs
+   - API responses
+
+3. Post-validation:
+   - Test coverage
+   - Performance metrics
+   - Security compliance
+
+## Enforced Processes
+
+### Development Workflow
+1. Code Changes:
+   - Pre-commit hooks
+   - Linting
+   - Type checking
+   - Unit testing
+
+2. Deployment:
+   - CI/CD pipeline
+   - Environment validation
+   - Security scanning
+   - Performance testing
+
+### Security and Compliance
+1. HIPAA Compliance:
+   - Data encryption
+   - Access control
+   - Audit logging
+   - Privacy protection
+
+2. Security Measures:
+   - Authentication
+   - Authorization
+   - Data validation
+   - Input sanitization
+
+## Dependencies
+1. Backend:
+   - Python 3.9+
+   - FastAPI
+   - SQLAlchemy
+   - Pydantic
+   - Redis
+   - RabbitMQ
+
+2. Frontend:
+   - Node.js 16+
+   - React 18
+   - TypeScript 4
+   - Material-UI
+   - Redux Toolkit
+
+3. Infrastructure:
+   - Docker
+   - Kubernetes
+   - Nginx
+   - PostgreSQL
+   - ELK Stack
+
+## Current State
+Last Updated: 2024-12-31T23:05:48+01:00
+- Beta testing phase implementation complete
+- Pre-validation framework implemented
+- Core features stable
+- Documentation updated
+- Test coverage maintained
+
+## Single Source of Truth
+1. Configuration:
+   - Environment variables (.env files)
+   - Beta settings (beta_settings.py)
+   - Validation rules (.validation-config.json)
+
+2. Documentation:
+   - API documentation (OpenAPI/Swagger)
+   - Development guides
+   - Deployment procedures
+   - Security protocols
+
+3. Monitoring:
+   - Centralized logging
+   - Performance metrics
+   - Error tracking
+   - Audit trails
+
+## Development Guidelines
+1. Code Quality:
+   - Type safety
+   - Error handling
+   - Testing coverage
+   - Documentation
+
+2. Security:
+   - HIPAA compliance
+   - Data encryption
+   - Access control
+   - Audit logging
+
+3. Performance:
+   - Caching strategy
+   - Query optimization
+   - Load balancing
+   - Resource monitoring

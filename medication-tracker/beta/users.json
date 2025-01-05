@@ -1,0 +1,38 @@
+{
+  "users": {
+    "tjJeD_zIt0bU16Mh06kxsw": {
+      "id": "tjJeD_zIt0bU16Mh06kxsw",
+      "email": "test@example.com",
+      "name": "Test User",
+      "onboarded_at": "2024-12-26T14:21:08.679101",
+      "status": "active",
+      "features": [
+        "family_sharing",
+        "emergency_contacts"
+      ]
+    },
+    "xHj1ZjsI94seZO1JTlsUfQ": {
+      "id": "xHj1ZjsI94seZO1JTlsUfQ",
+      "email": "test@example.com",
+      "name": "Test User",
+      "onboarded_at": "2024-12-26T14:25:44.105119",
+      "status": "active",
+      "features": [
+        "family_sharing",
+        "emergency_contacts"
+      ]
+    },
+    "JrOsJmbTKgOYDWbe25UMhw": {
+      "id": "JrOsJmbTKgOYDWbe25UMhw",
+      "email": "test@example.com",
+      "name": "Test User",
+      "onboarded_at": "2024-12-26T14:26:42.969553",
+      "status": "active",
+      "features": [
+        "family_sharing",
+        "emergency_contacts"
+      ]
+    }
+  },
+  "last_updated": "2024-12-26T14:26:42.970070"
+}

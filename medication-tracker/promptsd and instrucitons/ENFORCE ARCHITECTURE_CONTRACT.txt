@@ -1,0 +1,7 @@
+ENFORCE ARCHITECTURE_CONTRACT
+PRIORITY: [launch beta but first define all potential errors that will stand in the way of beta deployment before proceeding]
+REQUIRE: ALL validations
+LOAD:
+- /backend/app/core/architecture_contract.py
+- /UNIFIED_ENFORCEMENT.md
+- /beta_checklist.json

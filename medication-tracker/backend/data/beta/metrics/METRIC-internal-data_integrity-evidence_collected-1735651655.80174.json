@@ -1,0 +1,11 @@
+{
+  "metric_id": "METRIC-internal-data_integrity-evidence_collected-1735651655.80174",
+  "phase_id": "internal",
+  "component": "data_integrity",
+  "name": "evidence_collected",
+  "value": 1.0,
+  "metadata": {
+    "validation_id": "BETA-internal-data_integrity-1735651655.801224"
+  },
+  "timestamp": "2024-12-31T14:27:35.801740"
+}

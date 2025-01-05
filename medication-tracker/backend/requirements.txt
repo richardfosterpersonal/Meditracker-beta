@@ -1,0 +1,71 @@
+Flask==2.3.3
+Flask-SQLAlchemy==3.0.5
+Flask-JWT-Extended==4.5.2
+Flask-Migrate==4.0.4
+Flask-Cors==4.0.0
+python-dotenv==1.0.0
+Flask-SocketIO==5.3.5
+eventlet==0.33.3
+PyJWT==2.8.0
+Flask-Mail==0.9.1
+
+# Monitoring tools
+psutil==5.9.7
+requests==2.31.0
+
+# Performance monitoring and testing
+aiohttp==3.9.1
+schedule==1.2.1
+
+# Notification system
+APScheduler==3.10.4
+pytz==2023.3
+pywebpush==1.14.0
+py-vapid==1.9.0
+
+# Authentication
+passlib==1.7.4
+python-jose==3.3.0
+
+# Core Dependencies
+fastapi==0.104.1
+uvicorn==0.24.0
+python-jose==3.3.0
+passlib==1.7.4
+python-multipart==0.0.6
+pydantic==2.5.2
+pydantic-settings==2.1.0
+SQLAlchemy==2.0.23
+python-dotenv==1.0.0
+bcrypt==4.1.1
+schedule==1.2.1
+
+# Validation Dependencies
+requests==2.31.0  # For endpoint validation
+psutil==5.9.7    # For system resource validation
+typing-extensions==4.9.0  # For enhanced type hints
+
+# Hostinger Deployment
+gunicorn==21.2.0
+
+# Security
+cryptography==41.0.7
+python-jose==3.3.0
+bcrypt==4.1.1
+
+# Database
+aiosqlite==0.19.0
+alembic==1.12.1
+
+# Email
+aiosmtplib==2.0.2
+jinja2==3.1.2  # For email templates
+
+# Monitoring
+prometheus-client==0.19.0
+statsd==4.0.1
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2

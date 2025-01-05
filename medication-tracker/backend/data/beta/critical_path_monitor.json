@@ -1,0 +1,23 @@
+{
+    "start_time": "2025-01-01T18:31:28.967318",
+    "phases": {
+        "internal": {
+            "start_time": null,
+            "last_check": null,
+            "status": "not_started",
+            "issues": []
+        },
+        "limited": {
+            "start_time": null,
+            "last_check": null,
+            "status": "not_started",
+            "issues": []
+        },
+        "open": {
+            "start_time": null,
+            "last_check": null,
+            "status": "not_started",
+            "issues": []
+        }
+    }
+}

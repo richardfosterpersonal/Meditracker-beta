@@ -1,0 +1,78 @@
+ENHANCED VALIDATION CHECKPOINT
+Before proceeding with ANY changes or actions, verify:
+
+DOCUMENTATION ALIGNMENT
+Have you reviewed ALL relevant documentation?
+Does your proposed action align with the documented architecture?
+Have you checked the deployment/development guides?
+Are there existing procedures for what you're trying to do? Enhanced checks:
+Have you cross-referenced all dependency documentation against service roles?
+Are package purposes documented and justified?
+Do documentation patterns match actual implementation?
+Is there clear separation of concerns in documentation?
+EXISTING CODEBASE VERIFICATION
+Have you examined related configuration files?
+Have you checked for existing implementations?
+Have you reviewed the project structure for similar patterns?
+Have you verified dependencies and their configurations? Enhanced checks:
+Have you validated each dependency against its service's core purpose?
+Are there any cross-platform compatibility issues?
+Have you checked for unnecessary or conflicting dependencies?
+Is there clear separation between frontend/backend dependencies?
+Have you verified container-specific requirements?
+SINGLE SOURCE OF TRUTH
+Does this align with the established project standards?
+Have you checked all related configuration files?
+Are you maintaining consistency with existing patterns?
+Will this require updates to documentation? Enhanced checks:
+Have you verified package usage in actual code?
+Are dependencies justified by concrete implementation needs?
+Do all configuration files maintain consistent assumptions?
+Is there clear traceability between docs and implementation?
+CRITICAL PATH ADHERENCE
+Is this the correct next step in the sequence?
+Have prerequisites been completed and verified?
+Will this impact other components in the critical path?
+Have you checked dependencies between components? Enhanced checks:
+Have you validated the deployment environment assumptions?
+Are there platform-specific considerations in the critical path?
+Have you verified service boundaries and interactions?
+Is there clear separation of concerns in the execution path?
+RISK ASSESSMENT
+What could go wrong with this change?
+How can it affect other components?
+Is there a rollback strategy?
+Have you verified the current state before making changes? Enhanced checks:
+Have you considered cross-platform compatibility risks?
+Are there potential conflicts between development and deployment environments?
+Have you validated assumptions about package purposes?
+Is there a clear path to isolate and resolve dependency issues?
+NEW DEPENDENCY AND PLATFORM VALIDATION
+Have you justified each dependency against service architecture?
+Are there any GUI/CLI packages in API services?
+Have you checked for platform-specific path issues?
+Are container environment assumptions documented?
+Is there clear separation between service-specific dependencies?
+Have you validated against development/deployment environment differences?
+NEW ARCHITECTURAL COMPLIANCE
+Does each service maintain clear boundaries?
+Are dependencies appropriate for service roles?
+Is there unnecessary coupling between services?
+Have you validated against architecture principles?
+Are there any violations of service responsibilities?
+Do all changes maintain architectural integrity?
+VALIDATION REQUIREMENTS:
+
+Must provide specific evidence from codebase for EACH point
+Must document any assumptions being made
+Must verify cross-platform compatibility
+Must validate service boundary maintenance
+Must check for unnecessary dependencies
+Must maintain clear separation of concerns
+DO NOT proceed if:
+
+Any point cannot be fully verified
+Documentation and implementation don't align
+Dependencies violate service boundaries
+Platform-specific issues aren't resolved
+Architectural principles are compromised

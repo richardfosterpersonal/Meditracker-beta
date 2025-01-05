@@ -1,0 +1,74 @@
+name: MedMinder CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Shallow clones should be disabled for better relevancy of analysis
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        cache-dependency-path: './frontend/package-lock.json'
+    
+    - name: Frontend Install
+      working-directory: ./frontend
+      run: npm ci
+    
+    - name: Frontend Type Check
+      working-directory: ./frontend
+      run: npm run type-check
+    
+    - name: Frontend Lint
+      working-directory: ./frontend
+      run: npm run lint
+    
+    - name: Frontend Tests
+      working-directory: ./frontend
+      run: npm test -- --coverage
+    
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+        cache-dependency-path: './backend/requirements.txt'
+    
+    - name: Backend Install
+      working-directory: ./backend
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Backend Tests
+      working-directory: ./backend
+      run: python -m pytest
+    
+    - name: Upload Coverage
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage
+        path: |
+          frontend/coverage
+          backend/coverage
+
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

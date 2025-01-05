@@ -1,0 +1,19 @@
+{
+  "name": "@medication-tracker/backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "python -m flask run",
+    "test": "python -m pytest",
+    "lint": "flake8",
+    "type-check": "mypy ."
+  },
+  "dependencies": {
+    "@medication-tracker/shared": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.2",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0"
+  }
+}

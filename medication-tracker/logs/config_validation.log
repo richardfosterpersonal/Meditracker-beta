@@ -1,0 +1,36 @@
+2024-12-27 18:57:28,114 - app.core.config - INFO - Configuration initialized successfully
+2024-12-27 18:57:28,116 - __main__ - INFO - Starting pre-deployment validation...
+2024-12-27 18:57:28,116 - app.core.validation - ERROR - Security validation error: JWT secret key not properly configured
+2024-12-27 18:57:28,117 - __main__ - ERROR - Validation failed!
+2024-12-27 18:57:28,117 - __main__ - ERROR - environment (P0): FAILED - Missing variables: DATABASE_URL, JWT_SECRET_KEY, LOG_LEVEL
+2024-12-27 18:57:28,118 - __main__ - ERROR - security (P0): ERROR - JWT secret key not properly configured
+2024-12-27 19:09:41,001 - app.core.config - INFO - Configuration initialized successfully
+2024-12-27 19:09:41,006 - __main__ - INFO - Starting beta validation...
+2024-12-27 19:09:41,007 - app.core.beta_validator - ERROR - Beta validation failed with blocking issues:
+2024-12-27 19:09:41,007 - app.core.beta_validator - ERROR - - Critical Path: Missing variables: DATABASE_URL, JWT_SECRET_KEY, LOG_LEVEL
+2024-12-27 19:27:29,072 - app.core.config - INFO - Configuration initialized successfully
+2024-12-27 19:27:29,075 - __main__ - INFO - Starting beta validation...
+2024-12-27 19:27:29,075 - app.core.beta_validator - ERROR - Beta validation failed with blocking issues:
+2024-12-27 19:27:29,075 - app.core.beta_validator - ERROR - - Critical Path: Missing variables: DATABASE_URL, JWT_SECRET_KEY, LOG_LEVEL
+2024-12-30 20:58:42,324 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 20:58:42,696 - backend.app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 21:41:48,716 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 21:43:59,917 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 22:54:09,792 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 22:56:20,639 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 23:11:01,298 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 23:13:56,054 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 23:16:16,885 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 23:19:15,995 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 23:22:06,113 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-31 09:52:45,967 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-31 09:55:17,516 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-31 09:58:40,177 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-31 10:14:10,930 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-31 11:10:55,374 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-31 11:47:23,045 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-31 11:49:17,616 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-31 11:54:25,861 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-31 12:09:15,588 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-31 12:13:14,069 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-31 12:17:18,699 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'

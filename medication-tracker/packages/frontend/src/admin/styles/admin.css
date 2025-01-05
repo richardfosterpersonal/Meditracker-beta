@@ -1,0 +1,125 @@
+/**
+ * Admin Interface Styles
+ * Last Updated: 2024-12-25T20:45:12+01:00
+ * Status: INTERNAL
+ * Reference: ../../../docs/validation/decisions/VALIDATION_VISIBILITY.md
+ */
+
+.admin-layout {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.admin-header {
+  background: #343a40;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.environment-badge {
+  background: #28a745;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.admin-nav {
+  background: white;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.admin-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.admin-nav li {
+  margin: 0;
+}
+
+.admin-nav a {
+  display: block;
+  padding: 1rem;
+  color: #495057;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.admin-nav a:hover,
+.admin-nav a.active {
+  color: #007bff;
+  border-bottom-color: #007bff;
+}
+
+.admin-content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.production-warning {
+  background: #dc3545;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Authentication Styles */
+.admin-login {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-login h2 {
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+.admin-login .form-group {
+  margin-bottom: 1rem;
+}
+
+.admin-login label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.admin-login input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.admin-login button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-login button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.admin-login .error {
+  color: #dc3545;
+  margin-top: 1rem;
+  text-align: center;
+}

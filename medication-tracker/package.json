@@ -1,0 +1,38 @@
+{
+  "name": "medication-tracker",
+  "version": "1.0.0",
+  "description": "Medication Tracking Application with Critical Path Validation",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "prestart": "python scripts/validation/run_validation.py",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\" \"npm run watch:validation\"",
+    "start:frontend": "cd packages/frontend && npm start",
+    "start:backend": "cd packages/backend && python -m flask run",
+    "watch:validation": "python scripts/validation/run_validation.py",
+    "build": "lerna run build",
+    "validate": "python scripts/validation/run_validation.py",
+    "test": "lerna run test",
+    "lint": "lerna run lint",
+    "clean": "lerna clean",
+    "bootstrap": "lerna bootstrap",
+    "coverage": "powershell -File scripts/generate-coverage.ps1",
+    "sonar": "npm run coverage && sonar-scanner",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "eslint": "^8.40.0",
+    "prettier": "^2.8.8",
+    "lerna": "^7.1.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "@commitlint/cli": "^17.6.7",
+    "@commitlint/config-conventional": "^17.6.7"
+  }
+}

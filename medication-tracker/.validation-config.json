@@ -1,0 +1,61 @@
+{
+  "enabled": true,
+  "version": "2.0.0",
+  "lastValidated": "2024-12-30T21:00:35.421236",
+  "validationPaths": {
+    "backend": "backend/",
+    "frontend": "frontend/",
+    "beta": "beta/",
+    "docs": "docs/"
+  },
+  "criticalPaths": [
+    "backend/app/core",
+    "backend/app/validation",
+    "backend/app/infrastructure",
+    "frontend/src/core",
+    "beta"
+  ],
+  "validationLevels": {
+    "critical": [
+      "security",
+      "data",
+      "authentication"
+    ],
+    "high": [
+      "performance",
+      "monitoring",
+      "beta"
+    ],
+    "medium": [
+      "documentation",
+      "testing"
+    ],
+    "low": [
+      "styling",
+      "comments"
+    ]
+  },
+  "betaValidation": {
+    "enabled": true,
+    "components": [
+      "beta_testing",
+      "beta_onboarding",
+      "beta_monitoring",
+      "beta_feedback"
+    ],
+    "evidencePath": "beta/evidence",
+    "lastValidated": null
+  },
+  "dependencies": {
+    "validateOnStart": true,
+    "validateBeforeDeploy": true,
+    "requiredFiles": [
+      "requirements.txt",
+      "package.json",
+      "Dockerfile"
+    ]
+  },
+  "lastDisabled": "",
+  "disabledBy": "",
+  "reason": ""
+}

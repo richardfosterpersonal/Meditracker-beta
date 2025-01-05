@@ -1,0 +1,20 @@
+{"level":"info","message":"Starting migration test...","timestamp":"2024-12-22T15:18:43.443Z"}
+{"clientVersion":"6.1.0","errorCode":"P1001","level":"error","message":"Migration test failed: Can't reach database server at `db:5432`\n\nPlease make sure your database server is running at `db:5432`.","name":"PrismaClientInitializationError","stack":"PrismaClientInitializationError: Can't reach database server at `db:5432`\n\nPlease make sure your database server is running at `db:5432`.\n    at t (c:\\Users\\richa\\CascadeProjects\\medication-tracker\\node_modules\\@prisma\\client\\runtime\\library.js:112:2473)\n    at async testMigration (c:\\Users\\richa\\CascadeProjects\\medication-tracker\\scripts\\test-migration.ts:16:5)","timestamp":"2024-12-22T15:18:46.187Z"}
+{"level":"info","message":"Starting migration test...","timestamp":"2024-12-22T15:26:22.272Z"}
+{"level":"info","message":"Database connection successful","timestamp":"2024-12-22T15:26:22.302Z"}
+{"level":"info","message":"Table User exists with 0 records","timestamp":"2024-12-22T15:26:22.310Z"}
+{"level":"info","message":"Table Medication exists with 0 records","timestamp":"2024-12-22T15:26:22.312Z"}
+{"level":"info","message":"Table ScheduledDose exists with 0 records","timestamp":"2024-12-22T15:26:22.317Z"}
+{"level":"info","message":"Table DoseLog exists with 0 records","timestamp":"2024-12-22T15:26:22.320Z"}
+{"level":"info","message":"Table NotificationRule exists with 0 records","timestamp":"2024-12-22T15:26:22.322Z"}
+{"level":"info","message":"Table EmergencyAccessLog exists with 0 records","timestamp":"2024-12-22T15:26:22.323Z"}
+{"level":"info","message":"Table AuditLog exists with 0 records","timestamp":"2024-12-22T15:26:22.325Z"}
+{"level":"info","message":"Table DataEncryptionKey exists with 0 records","timestamp":"2024-12-22T15:26:22.327Z"}
+{"level":"info","message":"Table TwoFactorBackupCode exists with 0 records","timestamp":"2024-12-22T15:26:22.329Z"}
+{"level":"info","message":"User email index verified","timestamp":"2024-12-22T15:26:22.335Z"}
+{"level":"info","message":"Foreign key relationships verified","timestamp":"2024-12-22T15:26:22.337Z"}
+{"level":"info","message":"Data types verified","timestamp":"2024-12-22T15:26:22.339Z"}
+{"level":"info","message":"Encryption keys verified: 0 keys found","timestamp":"2024-12-22T15:26:22.340Z"}
+{"level":"info","message":"Two-factor authentication verified: 0 users enabled","timestamp":"2024-12-22T15:26:22.341Z"}
+{"level":"info","message":"Emergency access logging verified","timestamp":"2024-12-22T15:26:22.343Z"}
+{"level":"info","message":"Migration test completed successfully","timestamp":"2024-12-22T15:26:22.345Z"}

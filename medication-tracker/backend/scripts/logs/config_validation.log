@@ -1,0 +1,61 @@
+2024-12-30 16:33:05,703 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 16:33:06,015 - beta_logger - ERROR - Validation failed: 'Settings' object has no attribute 'logger' | Context: {'timestamp': '2024-12-30T16:33:06.015975', 'environment': 'development'}
+2024-12-30 16:35:47,896 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 16:35:48,016 - beta_logger - INFO - Validating beta_testing... | Context: {'timestamp': '2024-12-30T16:35:48.016676', 'environment': 'development'}
+2024-12-30 16:35:48,017 - beta_logger - ERROR - Error scanning directory backend/app/services: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.017206', 'environment': 'development'}
+2024-12-30 16:35:48,017 - beta_logger - ERROR - Error scanning directory backend/docs: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.017206', 'environment': 'development'}
+2024-12-30 16:35:48,017 - beta_logger - ERROR - Error scanning directory backend/scripts: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.017206', 'environment': 'development'}
+2024-12-30 16:35:48,017 - beta_logger - ERROR - Error scanning directory backend/tests: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.017206', 'environment': 'development'}
+2024-12-30 16:35:48,017 - beta_logger - ERROR - Error validating current state: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.017732', 'environment': 'development'}
+2024-12-30 16:35:48,017 - beta_logger - ERROR - Error checking dependencies: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.017732', 'environment': 'development'}
+2024-12-30 16:35:48,017 - beta_logger - INFO - Pre-validation state check completed for beta_testing | Context: {'timestamp': '2024-12-30T16:35:48.017732', 'environment': 'development'}
+2024-12-30 16:35:48,017 - beta_logger - INFO - Validating beta_onboarding... | Context: {'timestamp': '2024-12-30T16:35:48.017732', 'environment': 'development'}
+2024-12-30 16:35:48,017 - beta_logger - ERROR - Error scanning directory backend/app/services: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.017732', 'environment': 'development'}
+2024-12-30 16:35:48,017 - beta_logger - ERROR - Error scanning directory backend/docs: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.017732', 'environment': 'development'}
+2024-12-30 16:35:48,018 - beta_logger - ERROR - Error scanning directory backend/scripts: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.018262', 'environment': 'development'}
+2024-12-30 16:35:48,018 - beta_logger - ERROR - Error scanning directory backend/tests: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.018262', 'environment': 'development'}
+2024-12-30 16:35:48,018 - beta_logger - ERROR - Error validating current state: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.018262', 'environment': 'development'}
+2024-12-30 16:35:48,018 - beta_logger - ERROR - Error checking dependencies: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.018262', 'environment': 'development'}
+2024-12-30 16:35:48,018 - beta_logger - INFO - Pre-validation state check completed for beta_onboarding | Context: {'timestamp': '2024-12-30T16:35:48.018262', 'environment': 'development'}
+2024-12-30 16:35:48,018 - beta_logger - INFO - Validating beta_monitoring... | Context: {'timestamp': '2024-12-30T16:35:48.018784', 'environment': 'development'}
+2024-12-30 16:35:48,018 - beta_logger - ERROR - Error scanning directory backend/app/services: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.018784', 'environment': 'development'}
+2024-12-30 16:35:48,018 - beta_logger - ERROR - Error scanning directory backend/docs: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.018784', 'environment': 'development'}
+2024-12-30 16:35:48,018 - beta_logger - ERROR - Error scanning directory backend/scripts: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.018784', 'environment': 'development'}
+2024-12-30 16:35:48,018 - beta_logger - ERROR - Error scanning directory backend/tests: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.018784', 'environment': 'development'}
+2024-12-30 16:35:48,018 - beta_logger - ERROR - Error validating current state: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.018784', 'environment': 'development'}
+2024-12-30 16:35:48,018 - beta_logger - ERROR - Error checking dependencies: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.018784', 'environment': 'development'}
+2024-12-30 16:35:48,019 - beta_logger - INFO - Pre-validation state check completed for beta_monitoring | Context: {'timestamp': '2024-12-30T16:35:48.019312', 'environment': 'development'}
+2024-12-30 16:35:48,019 - beta_logger - INFO - Validating beta_feedback... | Context: {'timestamp': '2024-12-30T16:35:48.019312', 'environment': 'development'}
+2024-12-30 16:35:48,019 - beta_logger - ERROR - Error scanning directory backend/app/services: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.019312', 'environment': 'development'}
+2024-12-30 16:35:48,019 - beta_logger - ERROR - Error scanning directory backend/docs: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.019312', 'environment': 'development'}
+2024-12-30 16:35:48,019 - beta_logger - ERROR - Error scanning directory backend/scripts: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.019312', 'environment': 'development'}
+2024-12-30 16:35:48,019 - beta_logger - ERROR - Error scanning directory backend/tests: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.019312', 'environment': 'development'}
+2024-12-30 16:35:48,019 - beta_logger - ERROR - Error validating current state: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.019312', 'environment': 'development'}
+2024-12-30 16:35:48,019 - beta_logger - ERROR - Error checking dependencies: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T16:35:48.019312', 'environment': 'development'}
+2024-12-30 16:35:48,019 - beta_logger - INFO - Pre-validation state check completed for beta_feedback | Context: {'timestamp': '2024-12-30T16:35:48.019312', 'environment': 'development'}
+2024-12-30 20:36:10,096 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 20:36:10,477 - beta_logger - INFO - Validating beta_testing... | Context: {'timestamp': '2024-12-30T20:36:10.477042', 'environment': 'development'}
+2024-12-30 20:36:10,478 - beta_logger - ERROR - Error validating current state: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T20:36:10.478558', 'environment': 'development'}
+2024-12-30 20:36:10,478 - beta_logger - ERROR - Error checking dependencies: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T20:36:10.478558', 'environment': 'development'}
+2024-12-30 20:36:10,478 - beta_logger - INFO - Pre-validation state check completed for beta_testing | Context: {'timestamp': '2024-12-30T20:36:10.478558', 'environment': 'development'}
+2024-12-30 20:36:10,479 - beta_logger - INFO - Validating beta_onboarding... | Context: {'timestamp': '2024-12-30T20:36:10.479110', 'environment': 'development'}
+2024-12-30 20:36:10,479 - beta_logger - ERROR - Error validating current state: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T20:36:10.479110', 'environment': 'development'}
+2024-12-30 20:36:10,479 - beta_logger - ERROR - Error checking dependencies: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T20:36:10.479110', 'environment': 'development'}
+2024-12-30 20:36:10,479 - beta_logger - INFO - Pre-validation state check completed for beta_onboarding | Context: {'timestamp': '2024-12-30T20:36:10.479724', 'environment': 'development'}
+2024-12-30 20:36:10,479 - beta_logger - INFO - Validating beta_monitoring... | Context: {'timestamp': '2024-12-30T20:36:10.479724', 'environment': 'development'}
+2024-12-30 20:36:10,480 - beta_logger - ERROR - Error validating current state: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T20:36:10.479724', 'environment': 'development'}
+2024-12-30 20:36:10,480 - beta_logger - ERROR - Error checking dependencies: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T20:36:10.480245', 'environment': 'development'}
+2024-12-30 20:36:10,480 - beta_logger - INFO - Pre-validation state check completed for beta_monitoring | Context: {'timestamp': '2024-12-30T20:36:10.480245', 'environment': 'development'}
+2024-12-30 20:36:10,480 - beta_logger - INFO - Validating beta_feedback... | Context: {'timestamp': '2024-12-30T20:36:10.480245', 'environment': 'development'}
+2024-12-30 20:36:10,480 - beta_logger - ERROR - Error validating current state: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T20:36:10.480765', 'environment': 'development'}
+2024-12-30 20:36:10,480 - beta_logger - ERROR - Error checking dependencies: 'Settings' object has no attribute 'PROJECT_ROOT' | Context: {'timestamp': '2024-12-30T20:36:10.480765', 'environment': 'development'}
+2024-12-30 20:36:10,480 - beta_logger - INFO - Pre-validation state check completed for beta_feedback | Context: {'timestamp': '2024-12-30T20:36:10.480765', 'environment': 'development'}
+2024-12-30 20:46:24,988 - app.core.config - ERROR - Configuration initialization failed: ConfigValidator.register_config_key() got an unexpected keyword argument 'validation_func'
+2024-12-30 20:46:25,134 - beta_logger - INFO - Validating beta_testing... | Context: {'timestamp': '2024-12-30T20:46:25.134574', 'environment': 'development'}
+2024-12-30 20:46:25,135 - beta_logger - INFO - Pre-validation state check completed for beta_testing | Context: {'timestamp': '2024-12-30T20:46:25.135581', 'environment': 'development'}
+2024-12-30 20:46:25,135 - beta_logger - INFO - Validating beta_onboarding... | Context: {'timestamp': '2024-12-30T20:46:25.135581', 'environment': 'development'}
+2024-12-30 20:46:25,136 - beta_logger - INFO - Pre-validation state check completed for beta_onboarding | Context: {'timestamp': '2024-12-30T20:46:25.136581', 'environment': 'development'}
+2024-12-30 20:46:25,136 - beta_logger - INFO - Validating beta_monitoring... | Context: {'timestamp': '2024-12-30T20:46:25.136581', 'environment': 'development'}
+2024-12-30 20:46:25,136 - beta_logger - INFO - Pre-validation state check completed for beta_monitoring | Context: {'timestamp': '2024-12-30T20:46:25.136581', 'environment': 'development'}
+2024-12-30 20:46:25,136 - beta_logger - INFO - Validating beta_feedback... | Context: {'timestamp': '2024-12-30T20:46:25.136581', 'environment': 'development'}
+2024-12-30 20:46:25,136 - beta_logger - INFO - Pre-validation state check completed for beta_feedback | Context: {'timestamp': '2024-12-30T20:46:25.136581', 'environment': 'development'}

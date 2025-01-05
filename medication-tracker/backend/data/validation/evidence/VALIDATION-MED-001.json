@@ -1,0 +1,16 @@
+{
+  "timestamp": "2024-12-25T21:00:57.640869+00:00",
+  "validation_id": "VALIDATION-MED-001",
+  "data": [
+    {
+      "name": "warfarin",
+      "dosage": "5mg"
+    },
+    {
+      "name": "aspirin",
+      "dosage": "81mg"
+    }
+  ],
+  "validation_status": "pending",
+  "details": {}
+}

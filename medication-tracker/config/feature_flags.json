@@ -1,0 +1,30 @@
+{
+  "beta_features": {
+    "family_sharing": {
+      "enabled": true,
+      "users": [
+        "test_user_1",
+        "tjJeD_zIt0bU16Mh06kxsw",
+        "xHj1ZjsI94seZO1JTlsUfQ",
+        "JrOsJmbTKgOYDWbe25UMhw"
+      ],
+      "rollout_percentage": 10
+    },
+    "emergency_contacts": {
+      "enabled": true,
+      "users": [
+        "test_user_1",
+        "tjJeD_zIt0bU16Mh06kxsw",
+        "xHj1ZjsI94seZO1JTlsUfQ",
+        "JrOsJmbTKgOYDWbe25UMhw"
+      ],
+      "rollout_percentage": 20
+    },
+    "medication_interaction": {
+      "enabled": false,
+      "users": [],
+      "rollout_percentage": 0
+    }
+  },
+  "last_updated": "2024-12-26T14:26:42.969553"
+}

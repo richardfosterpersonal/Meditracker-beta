@@ -1,0 +1,122 @@
+---
+# Background Jobs Monitoring Dashboard
+# Last Updated: 2024-12-24T21:31:39+01:00
+# Critical Path Component: Yes
+# Validation Status: Active
+
+dashboard:
+  title: "Background Jobs Monitoring"
+  refresh: "1m"
+  time_range: "last 24h"
+  tags: ["critical-path", "background-jobs", "validation-required"]
+
+panels:
+  - title: "Job Execution Overview"
+    type: "stat-panel"
+    metrics:
+      - name: "job_success_rate"
+        query: "rate(background_jobs_success_total[5m])"
+        threshold:
+          critical: 0.99
+          warning: 0.995
+      - name: "job_error_rate"
+        query: "rate(background_jobs_error_total[5m])"
+        threshold:
+          critical: 0.01
+          warning: 0.005
+      - name: "average_execution_time"
+        query: "avg(background_jobs_execution_time_seconds)"
+        threshold:
+          critical: 10
+          warning: 5
+
+  - title: "Critical Path Jobs"
+    type: "time-series"
+    metrics:
+      - name: "medication_reminder_status"
+        query: "background_jobs_status{job_type='medication_reminder'}"
+      - name: "interaction_check_status"
+        query: "background_jobs_status{job_type='interaction_check'}"
+      - name: "supply_monitor_status"
+        query: "background_jobs_status{job_type='supply_monitor'}"
+
+  - title: "Job Queue Health"
+    type: "gauge"
+    metrics:
+      - name: "queue_size"
+        query: "background_jobs_queue_size"
+        threshold:
+          critical: 1000
+          warning: 500
+      - name: "queue_latency"
+        query: "background_jobs_queue_latency_seconds"
+        threshold:
+          critical: 300
+          warning: 60
+
+  - title: "HIPAA Compliance"
+    type: "table"
+    metrics:
+      - name: "encryption_status"
+        query: "background_jobs_encryption_status"
+      - name: "audit_log_status"
+        query: "background_jobs_audit_status"
+      - name: "compliance_violations"
+        query: "background_jobs_compliance_violations_total"
+
+  - title: "Evidence Collection"
+    type: "time-series"
+    metrics:
+      - name: "evidence_collection_rate"
+        query: "rate(background_jobs_evidence_collected_total[5m])"
+      - name: "evidence_validation_rate"
+        query: "rate(background_jobs_evidence_validated_total[5m])"
+
+  - title: "Validation Status"
+    type: "stat-panel"
+    metrics:
+      - name: "validation_success_rate"
+        query: "rate(background_jobs_validation_success_total[5m])"
+      - name: "validation_error_rate"
+        query: "rate(background_jobs_validation_error_total[5m])"
+
+alerts:
+  - name: "Critical Path Job Failure"
+    condition: "job_success_rate < 0.99"
+    severity: "critical"
+    notification:
+      channels: ["ops", "security"]
+      message: "Critical path job failure detected"
+
+  - name: "HIPAA Compliance Violation"
+    condition: "compliance_violations > 0"
+    severity: "critical"
+    notification:
+      channels: ["security", "compliance"]
+      message: "HIPAA compliance violation detected"
+
+  - name: "Evidence Collection Failure"
+    condition: "evidence_collection_rate < 0.99"
+    severity: "critical"
+    notification:
+      channels: ["ops", "validation"]
+      message: "Evidence collection failure detected"
+
+validation:
+  required: true
+  type: "critical-path"
+  evidence_collection: true
+  metrics_validation: true
+  compliance_check: true
+
+evidence_collection:
+  metrics: true
+  logs: true
+  audit_trail: true
+  retention: "365d"
+
+single_source_of_truth:
+  dashboard_version: "1.0.0"
+  last_validated: "2024-12-24T21:31:39+01:00"
+  validation_status: "active"
+  critical_path_aligned: true

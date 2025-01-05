@@ -1,0 +1,10 @@
+{
+  "current_phase": "ONBOARDING",
+  "completed_phases": [],
+  "timestamp": "2024-12-31T22:20:16.638142",
+  "phase_statuses": {
+    "ONBOARDING": "in_progress",
+    "CORE_FEATURES": "validating",
+    "DATA_SAFETY": "not_started"
+  }
+}

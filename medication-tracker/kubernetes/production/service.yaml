@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: medication-tracker
+  namespace: medication-tracker-prod
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "3000"
+spec:
+  selector:
+    app: medication-tracker
+  ports:
+  - port: 80
+    targetPort: 3000
+  type: ClusterIP

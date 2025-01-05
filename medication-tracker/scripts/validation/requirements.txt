@@ -1,0 +1,10 @@
+# Validation Hook Dependencies
+# Last Updated: 2024-12-25T20:40:07+01:00
+# Status: CRITICAL
+# Reference: ../../docs/validation/critical_path/MASTER_CRITICAL_PATH.md
+
+watchdog==3.0.0
+python-dateutil==2.8.2
+PyYAML==6.0.1
+pathlib==1.0.1
+typing-extensions==4.8.0

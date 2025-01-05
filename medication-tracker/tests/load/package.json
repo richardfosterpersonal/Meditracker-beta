@@ -1,0 +1,15 @@
+{
+  "name": "medication-tracker-load-tests",
+  "version": "1.0.0",
+  "description": "Load testing suite for medication tracker",
+  "type": "module",
+  "scripts": {
+    "test": "k6 run dist/main.js",
+    "build": "tsc",
+    "test:watch": "tsc -w"
+  },
+  "devDependencies": {
+    "@types/k6": "^0.47.3",
+    "typescript": "^5.3.3"
+  }
+}

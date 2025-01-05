@@ -1,0 +1,16 @@
+SECRET_KEY=786f74d42790420f885ef0be973a962a04362ef105d5f0c7f55d108a38e96252
+JWT_SECRET_KEY=e21c2531673a4faec84d7739deba3a62b4fdf21d5c7836f32550f279f29ed8df
+DATABASE_URL=sqlite:///app.db
+FLASK_ENV=development
+FLASK_APP=run.py
+
+# Email Settings
+MAIL_SERVER=smtp.gmail.com
+MAIL_PORT=465
+MAIL_USERNAME=smartmedtracker@gmail.com
+MAIL_PASSWORD=your-app-specific-password
+MAIL_DEFAULT_SENDER=smartmedtracker@gmail.com
+MAIL_USE_SSL=True
+
+# Application Settings
+BASE_URL=http://localhost:3000

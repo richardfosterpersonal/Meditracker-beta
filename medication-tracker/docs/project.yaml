@@ -1,0 +1,101 @@
+---
+# Project Definition
+# Last Updated: 2025-01-01T20:28:55+01:00
+
+version: "1.0"
+name: "Medication Tracker"
+description: "Medication tracking and management system"
+
+scope:
+  components:
+    - medication_management
+    - user_management
+    - notification
+    - monitoring
+    - database
+    - beta_testing
+  
+  features:
+    - medication_scheduling
+    - medication_reminders
+    - user_authentication
+    - beta_testing
+    - system_monitoring
+    - data_migration
+    
+  constraints:
+    - "Must maintain HIPAA compliance"
+    - "Must validate all medication interactions"
+    - "Must maintain data integrity"
+    - "Must enforce user privacy"
+    
+  exclusions:
+    - "No direct integration with pharmacy systems"
+    - "No prescription management"
+    - "No billing functionality"
+
+context_levels:
+  system:
+    - "medication_tracking"
+    - "user_management"
+    - "monitoring"
+  
+  project:
+    - "beta_testing"
+    - "migration"
+    - "validation"
+    
+  component:
+    - "medication_management"
+    - "user_management"
+    - "notification"
+    - "monitoring"
+    - "database"
+    - "beta_testing"
+    
+  feature:
+    - "scheduling"
+    - "reminders"
+    - "authentication"
+    - "monitoring"
+    - "migration"
+    
+  task:
+    - "implementation"
+    - "validation"
+    - "documentation"
+    - "testing"
+
+context_transitions:
+  allowed:
+    - from: "system"
+      to: ["project", "component"]
+    - from: "project"
+      to: ["component", "feature"]
+    - from: "component"
+      to: ["feature", "task"]
+    - from: "feature"
+      to: ["task"]
+      
+  restricted:
+    - from: "task"
+      to: ["system", "project"]
+    - from: "feature"
+      to: ["system"]
+
+validation_requirements:
+  context_switch:
+    - "Must validate architectural integrity"
+    - "Must validate requirements compliance"
+    - "Must validate scope adherence"
+    - "Must maintain documentation sync"
+    
+  scope_change:
+    - "Must be approved by project lead"
+    - "Must update all affected documentation"
+    - "Must validate impact on critical paths"
+    
+  requirement_change:
+    - "Must validate against project constraints"
+    - "Must update validation framework"
+    - "Must update monitoring metrics"

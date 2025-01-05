@@ -1,0 +1,85 @@
+---
+# Critical Paths Definition
+# Last Updated: 2025-01-01T20:26:52+01:00
+
+version: "1.0"
+last_updated: "2025-01-01T20:26:52+01:00"
+
+paths:
+  medication_scheduling:
+    description: "Critical path for medication scheduling"
+    priority: CRITICAL
+    components:
+      - medication_management
+      - database
+      - notification
+      - monitoring
+    validation_requirements:
+      - database.migrations
+      - medication_management.scheduling
+      - notification.delivery
+      - monitoring.metrics
+
+  user_authentication:
+    description: "Critical path for user authentication"
+    priority: CRITICAL
+    components:
+      - user_management
+      - database
+      - monitoring
+    validation_requirements:
+      - database.migrations
+      - user_management.authentication
+      - monitoring.metrics
+
+  beta_testing:
+    description: "Critical path for beta testing"
+    priority: HIGH
+    components:
+      - beta_testing
+      - monitoring
+      - database
+      - notification
+    validation_requirements:
+      - beta_testing.environment
+      - monitoring.metrics
+      - database.migrations
+      - notification.delivery
+
+  system_monitoring:
+    description: "Critical path for system monitoring"
+    priority: CRITICAL
+    components:
+      - monitoring
+      - notification
+    validation_requirements:
+      - monitoring.metrics
+      - monitoring.alerts
+      - notification.delivery
+
+validation_dependencies:
+  database.migrations:
+    - monitoring.metrics
+  medication_management.scheduling:
+    - database.migrations
+    - notification.delivery
+  user_management.authentication:
+    - database.migrations
+  notification.delivery:
+    - monitoring.metrics
+  beta_testing.environment:
+    - database.migrations
+    - monitoring.metrics
+    - notification.delivery
+
+documentation_requirements:
+  architecture:
+    - "architecture.yaml"
+    - "critical_paths.yaml"
+  components:
+    - "README.md"
+    - "api.md"
+    - "architecture.md"
+  validation:
+    - "validation.md"
+    - "metrics.md"

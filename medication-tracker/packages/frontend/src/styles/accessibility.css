@@ -1,0 +1,30 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link:focus {
+  top: 0 !important;
+}
+
+.screen-reader-optimized {
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+
+.screen-reader-optimized button,
+.screen-reader-optimized a {
+  padding: 12px !important;
+}
+
+.screen-reader-optimized :focus {
+  outline: 3px solid #007FFF !important;
+  outline-offset: 2px !important;
+}

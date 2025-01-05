@@ -1,0 +1,14 @@
+{
+  "validation_id": "TEST-coverage_report",
+  "timestamp": "2024-12-31T21:37:24.460113",
+  "phase": "internal",
+  "component": "code_coverage",
+  "status": "verified",
+  "data": {
+    "coverage": 85,
+    "checks": [
+      "unit",
+      "integration"
+    ]
+  }
+}

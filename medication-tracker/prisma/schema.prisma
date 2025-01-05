@@ -1,0 +1,182 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://medminder_dev:dev_password@localhost:5432/medminder_dev"
+}
+
+model User {
+  id                String             @id @default(uuid())
+  email            String             @unique
+  password         String
+  name             String
+  role             String             @default("user")
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+  medications      Medication[]
+  scheduledDoses   ScheduledDose[]
+  doseLogs         DoseLog[]
+  notificationRules NotificationRule[]
+  preferences      Json?
+  twoFactorSecret  String?
+  twoFactorEnabled Boolean            @default(false)
+  backupCodes      TwoFactorBackupCode[]
+  securityLog      SecurityLog[]
+  auditLogs        AuditLog[]
+  phiAccessLogs    PhiAccessLog[]
+  emergencyLogs    EmergencyAccessLog[]
+  consentLog       ConsentLog[]
+  disclaimerLog    DisclaimerLog[]
+  lastLogin        DateTime?
+  failedAttempts   Int                @default(0)
+  lockedUntil      DateTime?
+  consentGiven     Boolean            @default(false)
+  consentDate      DateTime?
+  dataRetention    Json?
+  accessRestrictions Json?
+}
+
+model Medication {
+  id              String         @id @default(uuid())
+  name            String
+  dosage          String
+  frequency       Int
+  instructions    String?
+  startDate       DateTime
+  endDate         DateTime?
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  userId          String
+  user            User           @relation(fields: [userId], references: [id])
+  scheduledDoses  ScheduledDose[]
+  doseLogs        DoseLog[]
+  interactions    Json?
+  sideEffects     Json?
+  warnings        Json?
+  active          Boolean        @default(true)
+}
+
+model ScheduledDose {
+  id            String     @id @default(uuid())
+  scheduledTime DateTime
+  status        String     @default("PENDING")
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  userId        String
+  user          User       @relation(fields: [userId], references: [id])
+  medicationId  String
+  medication    Medication @relation(fields: [medicationId], references: [id])
+  doseLog       DoseLog?
+}
+
+model DoseLog {
+  id              String        @id @default(uuid())
+  takenAt         DateTime
+  status          String
+  notes           String?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  userId          String
+  user            User          @relation(fields: [userId], references: [id])
+  medicationId    String
+  medication      Medication    @relation(fields: [medicationId], references: [id])
+  scheduledDoseId String        @unique
+  scheduledDose   ScheduledDose @relation(fields: [scheduledDoseId], references: [id])
+}
+
+model NotificationRule {
+  id        String   @id @default(uuid())
+  type      String
+  channel   String
+  schedule  Json
+  enabled   Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model TwoFactorBackupCode {
+  id        String   @id @default(uuid())
+  code      String
+  used      Boolean  @default(false)
+  usedAt    DateTime?
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model SecurityLog {
+  id        String   @id @default(uuid())
+  action    String
+  ip        String?
+  userAgent String?
+  success   Boolean
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  action    String
+  resource  String
+  details   Json?
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model PhiAccessLog {
+  id        String   @id @default(uuid())
+  action    String
+  resource  String
+  reason    String
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model EmergencyAccessLog {
+  id        String   @id @default(uuid())
+  action    String
+  reason    String
+  contact   String
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model ConsentLog {
+  id          String   @id @default(uuid())
+  type        String
+  version     String
+  accepted    Boolean
+  acceptedAt  DateTime?
+  createdAt   DateTime @default(now())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+}
+
+model DisclaimerLog {
+  id          String   @id @default(uuid())
+  type        String
+  version     String
+  accepted    Boolean
+  acceptedAt  DateTime?
+  createdAt   DateTime @default(now())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+}
+
+model DataEncryptionKey {
+  id           String   @id @default(uuid())
+  keyId        String   @unique
+  version      Int
+  key          String
+  active       Boolean  @default(true)
+  rotatedAt    DateTime?
+  createdAt    DateTime @default(now())
+}

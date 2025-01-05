@@ -1,0 +1,10 @@
+{
+  "component": "backend\\app\\validation\\medication_safety",
+  "timestamp": "2024-12-26T10:31:41.942591",
+  "files_checked": 0,
+  "files_valid": 0,
+  "overall_safety_score": 0,
+  "overall_security_score": 0,
+  "overall_reliability_score": 0,
+  "critical_issues": [],
+  "recommendations": 

@@ -1,0 +1,30 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.watcherExclude": {
+            "**/node_modules/**": true,
+            "**/venv/**": true,
+            "**/__pycache__/**": true,
+            "**/instance/**": true,
+            "**/.git/**": true
+        },
+        "search.exclude": {
+            "**/node_modules/**": true,
+            "**/venv/**": true,
+            "**/__pycache__/**": true,
+            "**/instance/**": true,
+            "**/.git/**": true
+        },
+        "files.exclude": {
+            "**/*.pyc": true,
+            "**/__pycache__": true,
+            "**/.pytest_cache": true,
+            "**/*.pyo": true,
+            "**/*.pyd": true
+        }
+    }
+}

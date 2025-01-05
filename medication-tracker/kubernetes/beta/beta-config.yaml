@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: beta-config
+  namespace: beta
+data:
+  ENVIRONMENT: "beta"
+  LOG_LEVEL: "debug"
+  ENABLE_BETA_FEATURES: "true"
+  FEEDBACK_ENABLED: "true"
+  METRICS_ENABLED: "true"
+  MAX_BETA_USERS: "100"
+  BETA_SUPPORT_EMAIL: "beta-support@medicationtracker.com"

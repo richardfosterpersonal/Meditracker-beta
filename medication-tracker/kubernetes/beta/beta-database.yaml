@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres-beta
+  namespace: beta
+spec:
+  serviceName: postgres-beta
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres-beta
+  template:
+    metadata:
+      labels:
+        app: postgres-beta
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:15
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_DB
+          value: medication_tracker_beta
+        - name: POSTGRES_USER
+          valueFrom:
+            secretKeyRef:
+              name: beta-db-secrets
+              key: username
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: beta-db-secrets
+              key: password
+        volumeMounts:
+        - name: postgres-beta-data
+          mountPath: /var/lib/postgresql/data
+  volumeClaimTemplates:
+  - metadata:
+      name: postgres-beta-data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 10Gi

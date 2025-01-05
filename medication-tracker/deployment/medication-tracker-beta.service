@@ -1,0 +1,33 @@
+[Unit]
+Description=Medication Tracker Beta Service
+After=network.target
+
+[Service]
+User=u374242363
+Group=u374242363
+WorkingDirectory=/home/u374242363/medication-tracker-backend
+Environment="PATH=/home/u374242363/medication-tracker-backend/venv/bin"
+EnvironmentFile=/home/u374242363/medication-tracker-backend/.env
+ExecStart=/home/u374242363/medication-tracker-backend/venv/bin/gunicorn \
+    --workers 4 \
+    --worker-class uvicorn.workers.UvicornWorker \
+    --bind 127.0.0.1:8000 \
+    --access-logfile /home/u374242363/logs/gunicorn-access.log \
+    --error-logfile /home/u374242363/logs/gunicorn-error.log \
+    --capture-output \
+    --enable-stdio-inheritance \
+    app.main:app
+
+# Security Settings
+NoNewPrivileges=yes
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=read-only
+
+# Restart Settings
+Restart=always
+RestartSec=5
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target

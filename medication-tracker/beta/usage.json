@@ -1,0 +1,25 @@
+{
+  "features": {
+    "family_sharing": {
+      "total_uses": 3,
+      "unique_users": [
+        "xHj1ZjsI94seZO1JTlsUfQ",
+        "JrOsJmbTKgOYDWbe25UMhw"
+      ]
+    },
+    "emergency_contacts": {
+      "total_uses": 1,
+      "unique_users": [
+        "JrOsJmbTKgOYDWbe25UMhw"
+      ]
+    }
+  },
+  "errors": [
+    {
+      "timestamp": "2024-12-26T14:26:42.991627",
+      "feature": "family_sharing",
+      "error": "Failed to send notification",
+      "user_id": "JrOsJmbTKgOYDWbe25UMhw"
+    }
+  ]
+}

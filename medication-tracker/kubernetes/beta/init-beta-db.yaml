@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: init-beta-db
+  namespace: beta
+spec:
+  template:
+    spec:
+      containers:
+      - name: init-db
+        image: medication-tracker:beta
+        command: ["python", "-m", "flask", "db", "upgrade"]
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: beta-secrets
+              key: database-url
+        - name: FLASK_APP
+          value: "app.main:app"
+        - name: ENVIRONMENT
+          value: "beta"
+      restartPolicy: OnFailure

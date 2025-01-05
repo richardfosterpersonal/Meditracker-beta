@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 60">
+  <!-- Pill Icon -->
+  <path d="M30 15 Q25 15 25 20L25 40Q25 45 30 45L40 45Q45 45 45 40L45 20Q45 15 40 15Z" fill="#2B6CB0" />
+  <path d="M30 15 Q25 15 25 20L25 30L45 30L45 20Q45 15 40 15Z" fill="#48BB78" />
+  
+  <!-- Clock Lines -->
+  <circle cx="35" cy="30" r="2" fill="white"/>
+  <path d="M35 30L35 23" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M35 30L40 33" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- MedMinder Text -->
+  <text x="60" y="38" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#2B6CB0">MedMinder</text>
+  
+  <!-- Pro Text -->
+  <text x="215" y="38" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#718096">Pro</text>
+</svg>

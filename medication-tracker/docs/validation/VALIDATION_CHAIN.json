@@ -1,0 +1,16 @@
+{
+  "last_updated": "2025-01-02T14:17:33+01:00",
+  "critical_paths": {
+    "master": "docs\\MASTER_CRITICAL_PATH.md",
+    "beta": "docs\\BETA_CRITICAL_PATH.md",
+    "validation": "docs\\VALIDATION_DOCUMENTATION.md",
+    "alignment": "docs\\MASTER_ALIGNMENT.md"
+  },
+  "validation_status": "active",
+  "validation_required": true,
+  "unified_framework": {
+    "enabled": true,
+    "version": "1.0.0",
+    "last_validated": "2025-01-02T14:17:33+01:00"
+  }
+}

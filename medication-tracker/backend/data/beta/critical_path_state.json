@@ -1,0 +1,30 @@
+{
+    "start_time": "2024-12-31T15:40:06.257162",
+    "current_phase": null,
+    "phases": {
+        "internal": {
+            "status": "not_started",
+            "start_time": null,
+            "end_time": null,
+            "validation_results": {},
+            "blocking_issues": [],
+            "evidence_ids": []
+        },
+        "limited": {
+            "status": "not_started",
+            "start_time": null,
+            "end_time": null,
+            "validation_results": {},
+            "blocking_issues": [],
+            "evidence_ids": []
+        },
+        "open": {
+            "status": "not_started",
+            "start_time": null,
+            "end_time": null,
+            "validation_results": {},
+            "blocking_issues": [],
+            "evidence_ids": []
+        }
+    }
+}

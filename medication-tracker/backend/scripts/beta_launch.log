@@ -1,0 +1,22 @@
+2025-01-02 11:04:44,331 [INFO] Starting beta launch process...
+2025-01-02 11:04:44,832 [INFO] Registered hook: conversation_guidelines
+2025-01-02 11:04:44,832 [INFO] Registered hook: debug_practices
+2025-01-02 11:04:44,832 [INFO] Registered hook: process
+2025-01-02 11:04:44,832 [INFO] Registered hook: documentation
+2025-01-02 11:04:44,832 [INFO] Registered hook: dependencies
+2025-01-02 11:04:44,832 [INFO] Core hooks registered
+2025-01-02 11:04:44,832 [ERROR] Failed to import launch manager: cannot import name 'HookCompetencyLevel' from 'backend.app.core.validation_hooks' (c:\Users\richa\CascadeProjects\medication-tracker\backend\app\core\validation_hooks.py)
+2025-01-02 11:04:44,832 [ERROR] Please ensure project root is in PYTHONPATH
+2025-01-02 11:04:44,833 [ERROR] Project root: c:\Users\richa\CascadeProjects\medication-tracker
+2025-01-02 11:04:44,833 [ERROR] Current PYTHONPATH: ['c:\\Users\\richa\\CascadeProjects\\medication-tracker', 'c:\\Users\\richa\\CascadeProjects\\medication-tracker\\backend\\scripts', 'C:\\Python312\\python312.zip', 'C:\\Python312\\DLLs', 'C:\\Python312\\Lib', 'C:\\Python312', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32\\lib', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\Pythonwin', 'C:\\Python312\\Lib\\site-packages']
+2025-01-02 11:05:59,721 [INFO] Starting beta launch process...
+2025-01-02 11:06:00,299 [INFO] Registered hook: conversation_guidelines
+2025-01-02 11:06:00,299 [INFO] Registered hook: debug_practices
+2025-01-02 11:06:00,300 [INFO] Registered hook: process
+2025-01-02 11:06:00,300 [INFO] Registered hook: documentation
+2025-01-02 11:06:00,300 [INFO] Registered hook: dependencies
+2025-01-02 11:06:00,300 [INFO] Core hooks registered
+2025-01-02 11:06:00,300 [ERROR] Failed to import launch manager: cannot import name 'ArchitectureError' from 'backend.app.exceptions' (c:\Users\richa\CascadeProjects\medication-tracker\backend\app\exceptions.py)
+2025-01-02 11:06:00,300 [ERROR] Please ensure project root is in PYTHONPATH
+2025-01-02 11:06:00,300 [ERROR] Project root: c:\Users\richa\CascadeProjects\medication-tracker
+2025-01-02 11:06:00,300 [ERROR] Current PYTHONPATH: ['c:\\Users\\richa\\CascadeProjects\\medication-tracker', 'c:\\Users\\richa\\CascadeProjects\\medication-tracker\\backend\\scripts', 'C:\\Python312\\python312.zip', 'C:\\Python312\\DLLs', 'C:\\Python312\\Lib', 'C:\\Python312', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32\\lib', 'C:\\Users\\richa\\AppData\\Roaming\\Python\\Python312\\site-packages\\Pythonwin', 'C:\\Python312\\Lib\\site-packages']

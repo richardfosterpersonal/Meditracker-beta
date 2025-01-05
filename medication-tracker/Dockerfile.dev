@@ -1,0 +1,38 @@
+# Use Node.js LTS
+FROM node:18-alpine
+
+# Install system dependencies
+RUN apk add --no-cache curl python3 make g++
+
+# Install global npm packages
+RUN npm install -g typescript ts-node react-app-rewired
+
+# Create app directory
+WORKDIR /app
+
+# Copy package.json files
+COPY package*.json ./
+COPY frontend/package*.json ./frontend/
+COPY backend/package*.json ./backend/
+
+# Set npm cache directory
+RUN npm config set cache /root/.npm
+
+# Install dependencies
+RUN npm install --legacy-peer-deps && \
+    cd frontend && npm install --legacy-peer-deps && \
+    cd ../backend && npm install --legacy-peer-deps && \
+    cd ../frontend && npm install --save buffer stream-browserify crypto-browserify process --legacy-peer-deps
+
+# Copy the rest of the application
+COPY . .
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+    CMD curl -f http://localhost:3000/health || exit 1
+
+# Expose port
+EXPOSE 3000
+
+# Start development server
+CMD ["npm", "run", "dev"]
