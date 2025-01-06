@@ -1,10 +1,12 @@
 name: SonarCloud Analysis
 
 on:
+  # Trigger analysis when pushing to your main branches
   push:
     branches:
       - main
       - develop
+  # Trigger analysis when creating/updating pull requests
   pull_request:
     types: [opened, synchronize, reopened]
 
