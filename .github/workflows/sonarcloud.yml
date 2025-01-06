@@ -1,0 +1,51 @@
+name: SonarCloud Analysis
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          cd frontend && npm install
+          cd ../backend && pip install -r requirements.txt
+          cd ../
+
+      - name: Generate coverage reports
+        run: |
+          cd frontend && npm run test:coverage
+          cd ../backend && python -m pytest --cov=app --cov-report=xml
+          cd ../
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.organization=richardfosterpersonal
+            -Dsonar.projectKey=richardfosterpersonal_Meditracker-beta
