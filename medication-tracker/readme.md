@@ -3,6 +3,8 @@ Last Updated: 2025-01-05T15:57:00+01:00
 Status: BETA
 Reference: docs/validation/MASTER_VALIDATION_INDEX.md
 
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=richardfosterpersonal_Meditracker-beta)
+
 ## Overview
 A HIPAA-compliant medication tracking system focusing on patient safety and reliable medication management.
 

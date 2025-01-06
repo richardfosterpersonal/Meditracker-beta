@@ -1,4 +1,4 @@
-name: SonarCloud Analysis
+name: SonarCloud Scan
 
 on:
   # Trigger analysis when pushing to your main branches
@@ -12,7 +12,7 @@ on:
 
 jobs:
   sonarcloud:
-    name: SonarCloud
+    name: SonarCloud Scan
     runs-on: ubuntu-latest
 
     steps:
